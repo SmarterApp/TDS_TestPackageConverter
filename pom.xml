@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<support-tool-client.version>4.1.9</support-tool-client.version>
+		<support-tool-client.version>4.1.11</support-tool-client.version>
 		<tds-common.version>5.0.4</tds-common.version>
 
 		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
