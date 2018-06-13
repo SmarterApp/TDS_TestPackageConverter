@@ -439,7 +439,7 @@ public class TestPackageMapperTest extends TestPackageBaseTest {
         assertThat(item1434.getTeacherHandScoring().get().getTrainingGuide().get()).isEqualTo("G3_2703_SG.pdf");
         assertThat(item1434.getTeacherHandScoring().get().layout()).isEqualTo("WAI");
         assertThat(item1434.getTeacherHandScoring().get().getDescription()).isEqualTo("Mandatory Financial Literacy Classes - SBAC_Field");
-        assertThat(item1434.getTeacherHandScoring().get().dimensions().value).isNotNull();
+        assertThat(item1434.getTeacherHandScoring().get().dimensions()).isNotNull();
 
         assertThat(item1432.getId()).isEqualTo("1432");
         assertThat(item1432.doNotScore()).isTrue();

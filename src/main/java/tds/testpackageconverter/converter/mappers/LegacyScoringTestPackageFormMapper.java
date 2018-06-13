@@ -73,7 +73,6 @@ public class LegacyScoringTestPackageFormMapper {
                 // Generate a new form key - apparently this cannot be the same as the original "forms" and needs to be
                 // manually mapped in the TIS database
                 final String originalFormPartitionId = formPartition.getIdentifier().getUniqueid();
-                final String combinedFormPartitionId = String.format("%s-%s", testPackage.getBankKey(), TestPackageUtils.generateFormKey());
                 final String combinedFormPartitionId = String.format("%s-%s", testPackage.getBankKey(),
                         TestPackageUtils.generateFormKey(formPartition.getIdentifier().getName()));
                 formPartition.getIdentifier().setUniqueid(combinedFormPartitionId);
