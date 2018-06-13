@@ -134,7 +134,7 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
         final File diffFile = new File(diffOutputFilePath);
 
         try {
-            testPackageMapper.writeValue(diffFile, diff);
+            legacyXmlMapper.writeValue(diffFile, diff);
             diffFile.createNewFile();
             System.out.println("Successfully created the test package diff file " + diffOutputFilePath);
         } catch (IOException e) {
