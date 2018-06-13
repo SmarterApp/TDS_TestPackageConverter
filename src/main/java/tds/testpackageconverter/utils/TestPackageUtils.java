@@ -103,7 +103,7 @@ public class TestPackageUtils {
                 return String.format("%s::%s", formId, languageCode);
         }
     }
-
+  
     public static int generateFormKey(final String formId) {
         return Math.abs(formId.hashCode());
     }

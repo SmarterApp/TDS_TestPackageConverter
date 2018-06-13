@@ -96,7 +96,6 @@ public class LegacyAdministrationTestPackageMapper {
 
     private static Map<String,Long> generateFormKeys(final Assessment assessment) {
         final Map<String, Long> formKeyMap = new HashMap<>();
-
         assessment.getSegments()
                 .forEach(segment -> segment.segmentForms()
                         .forEach(form -> form.getPresentations()

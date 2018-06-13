@@ -1,4 +1,4 @@
-<TestPackage id="SBAC-ICA-FIXED-G7E-COMBINED-2017" publisher="SBAC" publishDate="2016-06-16T00:40:00Z" subject="ELA" type="interim" version="9787" bankKey="200" academicYear="2018">
+<TestPackage id="SBAC-ICA-FIXED-G7E-COMBINED-2017" publisher="SBAC" publishDate="2016-06-16T00:40:00Z" subject="ELA" type="interim" version="9787" bankKey="200" academicYear="2018" subType="ICA">
   <Blueprint>
     <BlueprintElement id="SBAC-ICA-FIXED-G7E-COMBINED-2017" type="package">
       <Scoring>
@@ -314,7 +314,7 @@
               </Item>
             </ItemGroup>
             <ItemGroup maxItems="ALL" maxResponses="0" id="29311">
-              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="29311" type="MC">
+              <Item active="true" doNotScore="true" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="29311" type="MC">
                 <PoolProperties>
                   <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
                   <PoolProperty name="Braille" value="BRF"/>
@@ -371,6 +371,71 @@
                     <ItemScoreParameter value="0.0" measurementParameter="c"/>
                   </ItemScoreDimension>
                 </ItemScoreDimensions>
+                <TeacherHandScoring exemplar="G3_2703_TM.pdf" trainingGuide="G3_2703_SG.pdf" layout="WAI" description="Mandatory Financial Literacy Classes - SBAC_Field">
+                  <Dimensions>
+                    <![CDATA[
+                                            [
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "CONVENTIONS",
+                                                    "maxPoints": "2",
+                                                    "minPoints": "0"
+                                                },
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "ELABORATION",
+                                                    "maxPoints": "3",
+                                                    "minPoints": "0"
+                                                },
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "ORGANIZATION",
+                                                    "maxPoints": "3",
+                                                    "minPoints": "0"
+                                                }
+                                            ]
+                                        ]]>
+                  </Dimensions>
+                </TeacherHandScoring>
               </Item>
             </ItemGroup>
             <ItemGroup maxItems="ALL" maxResponses="ALL" id="1433">
@@ -1580,6 +1645,20 @@
         </SegmentForms>
       </Segment>
     </Segments>
+    <Tools>
+      <Tool name="Expandable Passages">
+        <Options>
+          <Option code="TDS_ExpandablePassages0" sortOrder="0" />
+          <Option code="TDS_ExpandablePassages1" sortOrder="1" />
+        </Options>
+      </Tool>
+      <Tool name="Mark for Review">
+        <Options>
+          <Option code="TDS_MfR0" sortOrder="0" />
+          <Option code="TDS_MfR1" sortOrder="1" default="true" />
+        </Options>
+      </Tool>
+    </Tools>
   </Test>
   <Test id="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroom" label="ICA-G7E-Perf">
     <Grades>
@@ -1755,6 +1834,14 @@
             </ItemGroup>
           </SegmentForm>
         </SegmentForms>
+        <Tools>
+          <Tool name="Calculator">
+            <Options>
+              <Option code="TDS_Calc0" sortOrder="0" />
+              <Option code="TDS_CalcSciInv" sortOrder="1" default="true" />
+            </Options>
+          </Tool>
+        </Tools>
       </Segment>
     </Segments>
   </Test>

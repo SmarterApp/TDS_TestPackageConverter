@@ -7,6 +7,7 @@ import tds.testpackage.diff.TestPackageDiff;
 import tds.testpackageconverter.converter.mappers.LegacyAdministrationTestPackageMapper;
 import tds.testpackageconverter.converter.TestPackageConverterService;
 import tds.testpackageconverter.converter.mappers.LegacyScoringTestPackageMapper;
+import tds.testpackageconverter.converter.mappers.TestPackageDiffMapper;
 import tds.testpackageconverter.converter.mappers.TestPackageMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -98,6 +99,7 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
         final TestPackage testPackage = readTestPackage(testPackagePath);
         final List<Testspecification> administrationPackages = LegacyAdministrationTestPackageMapper.fromNew(testPackage);
 
+        // Create the administration file(s)
         administrationPackages.forEach(testSpecification -> {
             final String administrationOutputFilename = testSpecification.getIdentifier().getUniqueid() + ".xml";
             final File administrationFile = new File(administrationOutputFilename);
@@ -111,6 +113,7 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
             }
         });
 
+        // Create the scoring file (if scoring data is present)
         if (isScoringDataIncluded(testPackage)) {
             final Testspecification scoringPackage = LegacyScoringTestPackageMapper.fromNew(testPackage, administrationPackages);
             final String scoringOutputFilename = scoringPackage.getIdentifier().getUniqueid() + "-SCORING.xml";
@@ -120,9 +123,23 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
                 scoringFile.createNewFile();
                 System.out.println("Successfully created the scoring testspecification file " + scoringOutputFilename);
             } catch (IOException e) {
-                log.error("An exception occurred while creating the file: {}", scoringOutputFilename, e);
+                log.error("An exception occurred while creating the file {}", scoringOutputFilename, e);
                 throw new RuntimeException(e);
             }
+        }
+
+        // Create the diff file
+        final TestPackageDiff diff = TestPackageDiffMapper.fromNew(testPackage);
+        final String diffOutputFilePath = String.format("%s-diff.xml", testPackage.getId());
+        final File diffFile = new File(diffOutputFilePath);
+
+        try {
+            testPackageMapper.writeValue(diffFile, diff);
+            diffFile.createNewFile();
+            System.out.println("Successfully created the test package diff file " + diffOutputFilePath);
+        } catch (IOException e) {
+            log.error("An exception occurred while creating the file {}", diffOutputFilePath, e);
+            throw new RuntimeException(e);
         }
     }
 
