@@ -40,7 +40,7 @@ To convert a legacy format to the new package format one needs to provide the `c
 There are two main ways to convert the files:
 
 * Convert test package information from a single zip archive file
-* Convert test package information referencing many files via command line optonis
+* Convert test package information referencing many files via command line options
 
 More information and options are listed below.
 
@@ -89,7 +89,7 @@ The command will create a new test package in the new format with the name `newT
 
 ## Converting from New to Legacy Format
 
-Converting from a new format to the legacy format has less commands because the new format contains all the information in a single file.  Previous test packages may have required multiple files to create it.
+Converting from a new format to the legacy format has fewer commands because the new format contains all the information in a single file.  Previous test packages may have required multiple files to create it.
 
 `java -jar tds-test-package-converter.jar convert-from-new handScoreTestNew.xml`
 
