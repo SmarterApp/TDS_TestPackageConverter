@@ -8,6 +8,7 @@ import tds.testpackage.diff.TestPackageDiff;
 import tds.testpackage.legacy.model.*;
 import tds.testpackage.legacy.model.Property;
 import tds.testpackage.model.*;
+
 import tds.testpackageconverter.utils.TestPackageUtils;
 
 import java.text.ParseException;
