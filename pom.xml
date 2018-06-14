@@ -71,7 +71,9 @@
     </scm>
 
 	<build>
-        <pluginManagement>
+		<finalName>${project.name}-${build.time}</finalName>
+
+		<pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -88,7 +90,12 @@
                     <artifactId>maven-source-plugin</artifactId>
                     <version>${maven.source.plugin.version}</version>
                 </plugin>
-            </plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>1.4</version>
+				</plugin>
+			</plugins>
         </pluginManagement>
 		<plugins>
 			<plugin>
@@ -103,6 +110,25 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.10</version>
+				<executions>
+					<execution>
+						<id>timestamp-property</id>
+						<goals>
+							<goal>timestamp-property</goal>
+						</goals>
+						<configuration>
+							<name>build.time</name>
+							<pattern>MMddyyyyHHmm</pattern>
+							<locale>en_US</locale>
+							<timeZone>UTC</timeZone>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
