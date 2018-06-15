@@ -100,8 +100,8 @@ public class LegacyAdministrationTestPackageMapper {
                 .forEach(segment -> segment.segmentForms()
                         .forEach(form -> form.getPresentations()
                             .forEach(presentation ->
-                                    formKeyMap.put(TestPackageUtils.getFormIdForLanguage(form.getId(), presentation.getCode()),
-                                            (long) TestPackageUtils.generateFormKey(form.getId())))
+                                    formKeyMap.put(form.id(presentation.getCode()),
+                                            (long) form.key(presentation.getCode())))
                         )
                 );
         return formKeyMap;

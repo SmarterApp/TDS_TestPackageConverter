@@ -80,7 +80,7 @@ public class LegacyAdministrationTestPackageFormMapper {
                                                   final String version, final int bankKey) {
         final Formpartition formPartition = new Formpartition();
         final Identifier formPartitionIdentifier = new Identifier();
-        final String formId = TestPackageUtils.getFormIdForLanguage(form.getId(), presentation.getCode());
+        final String formId = form.id(presentation.getCode());
         final String formKey = String.format("%s-%s", bankKey, formIdToKeyMap.get(formId));
         formPartitionIdentifier.setUniqueid(formKey);
         formPartitionIdentifier.setName(formId);

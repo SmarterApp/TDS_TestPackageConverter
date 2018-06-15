@@ -6,6 +6,7 @@ import com.google.common.collect.Multimap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import tds.testpackage.legacy.model.*;
+import tds.testpackage.model.SegmentForm;
 import tds.testpackage.model.TestPackage;
 import tds.testpackageconverter.utils.TestPackageUtils;
 
@@ -73,8 +74,7 @@ public class LegacyScoringTestPackageFormMapper {
                 // Generate a new form key - apparently this cannot be the same as the original "forms" and needs to be
                 // manually mapped in the TIS database
                 final String originalFormPartitionId = formPartition.getIdentifier().getUniqueid();
-                final String combinedFormPartitionId = String.format("%s-%s", testPackage.getBankKey(),
-                        TestPackageUtils.generateFormKey(formPartition.getIdentifier().getName()));
+                final String combinedFormPartitionId = String.format("%s-%s", testPackage.getBankKey(), SegmentForm.generateFormKey(formPartition.getIdentifier().getName()));
                 formPartition.getIdentifier().setUniqueid(combinedFormPartitionId);
                 formPartition.getIdentifier().setName(formPartition.getIdentifier().getName() + " COMBINED");
 
