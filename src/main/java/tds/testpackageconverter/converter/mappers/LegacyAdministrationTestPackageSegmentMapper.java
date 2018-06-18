@@ -51,7 +51,7 @@ public class LegacyAdministrationTestPackageSegmentMapper {
                         .flatMap(form -> form.getPresentations().stream()
                                 .map(language -> {
                                     final Segmentform segmentForm = new Segmentform();
-                                    final String formId = TestPackageUtils.getFormIdForLanguage(form.getId(), language.getCode());
+                                    final String formId = form.id(language.getCode());
                                     segmentForm.setFormpartitionid(String.format("%s-%s", testPackage.getBankKey(), formIdToKeyMap.get(formId)));
                                     return segmentForm;
                                 })
