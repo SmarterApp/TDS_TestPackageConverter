@@ -56,6 +56,11 @@ public class LegacyScoringTestPackageFormMapperTest extends LegacyTestPackageBas
                 .filter(form -> form.getIdentifier().getUniqueid().equalsIgnoreCase("(SBAC)SBAC-ICA-FIXED-G7E-COMBINED-2017-2018:Default-ENU-Braille"))
                 .findFirst().get();
 
+        assertThat(brailleTestForm.getProperty()).hasSize(1);
+        assertThat(brailleTestForm.getProperty().get(0).getName()).isEqualTo("Language");
+        assertThat(brailleTestForm.getProperty().get(0).getValue()).isEqualTo("ENU-Braille");
+        assertThat(brailleTestForm.getProperty().get(0).getLabel()).isEqualTo("Braille");
+
         assertThat(brailleTestForm.getLength()).isEqualTo(48);
         assertThat(brailleTestForm.getIdentifier().getName()).isEqualTo("(SBAC)SBAC-ICA-FIXED-G7E-COMBINED-2017-2018:Default-ENU-Braille");
         assertThat(brailleTestForm.getIdentifier().getVersion().intValue()).isEqualTo(9787);
@@ -75,5 +80,6 @@ public class LegacyScoringTestPackageFormMapperTest extends LegacyTestPackageBas
         assertThat(braillePartition3.getIdentifier().getUniqueid()).isNotNull();
         assertThat(braillePartition3.getIdentifier().getName()).isEqualTo("ELA ICA Perf G7b 2017 ENG::BRL COMBINED");
         assertThat(braillePartition3.getItemgroup()).hasSize(1);
+
     }
 }

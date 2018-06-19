@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class LegacyScoringTestPackageFormMapper {
+    private static final Logger log = LoggerFactory.getLogger(LegacyScoringTestPackageFormMapper.class);
 
     public static List<Testform> mapTestForms(final TestPackage testPackage,
                                               final List<Testspecification> administrationPackages) {
@@ -69,6 +70,8 @@ public class LegacyScoringTestPackageFormMapper {
             identifier.setVersion(new BigDecimal(testPackage.getVersion()));
             combinedTestForm.setIdentifier(identifier);
 
+            combinedTestForm.getProperty().add(mapFormLanguageProperty(cohortLanguage));
+
             // Modify the form keys/id
             for (Formpartition formPartition : formPartitions) {
                 // Generate a new form key - apparently this cannot be the same as the original "forms" and needs to be
@@ -93,6 +96,27 @@ public class LegacyScoringTestPackageFormMapper {
         });
 
         return combinedForms;
+    }
+
+    private static Property mapFormLanguageProperty(final String cohortLanguage) {
+        final Property property = new Property();
+        property.setName("Language");
+
+        if (cohortLanguage.contains("ENU-Braille")) {
+            property.setValue("ENU-Braille");
+            property.setLabel("Braille");
+        } else if (cohortLanguage.contains("ESN")) {
+            property.setValue("ESN");
+            property.setLabel("Spanish");
+        } else if (cohortLanguage.contains("ENU")){
+            property.setValue("ENU");
+            property.setLabel("English");
+        } else {
+            log.warn("Could not parse language out of form key for the string {}", cohortLanguage);
+            return null;
+        }
+
+        return property;
     }
 
     private static String parseCohortLanguage(final String formKey) {
