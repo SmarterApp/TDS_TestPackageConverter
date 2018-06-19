@@ -41,11 +41,11 @@ public class LegacyAdministrationTestPackageFormMapperTest extends LegacyTestPac
         assertThat(form.getLength()).isEqualTo(27);
         assertThat(form.getIdentifier().getUniqueid()).isEqualTo("(SBAC_PT)SBAC-Mathematics-6-2018:Default-ENU-Braille");
         assertThat(form.getIdentifier().getName()).isEqualTo("(SBAC_PT)SBAC-Mathematics-6-2018:Default-ENU-Braille");
-//
-//        assertThat(form.getProperty()).hasSize(1);
-//        assertThat(form.getProperty().get(0).getName()).isEqualToIgnoringCase("Language");
-//        assertThat(form.getProperty().get(0).getValue()).isEqualToIgnoringCase("ENU-Braille");
-//        assertThat(form.getProperty().get(0).getLabel()).isEqualToIgnoringCase("English");
+
+        assertThat(form.getProperty()).hasSize(1);
+        assertThat(form.getProperty().get(0).getName()).isEqualToIgnoringCase("Language");
+        assertThat(form.getProperty().get(0).getValue()).isEqualToIgnoringCase("ENU-Braille");
+        assertThat(form.getProperty().get(0).getLabel()).isEqualToIgnoringCase("Braille");
 
         assertThat(form.getFormpartition()).hasSize(2);
         Formpartition partition = form.getFormpartition().get(0);
