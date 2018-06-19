@@ -3,6 +3,7 @@ package tds.testpackageconverter.converter.mappers;
 import org.assertj.core.util.Lists;
 import tds.common.Algorithm;
 import tds.testpackage.legacy.model.*;
+import tds.testpackage.legacy.model.Property;
 import tds.testpackage.model.*;
 import tds.testpackageconverter.utils.TestPackageUtils;
 
@@ -45,12 +46,11 @@ public class LegacyAdministrationTestPackageFormMapper {
                                         testform.getFormpartition().add(mapFormPartition(form, formIdToKeyMap, presentation,
                                                 testPackage.getVersion(), testPackage.getBankKey()));
 
-                                        Poolproperty property = new Poolproperty();
-                                        property.setProperty("Language");
+                                        Property property = new Property();
+                                        property.setName("Language");
                                         property.setValue(presentation.getCode());
                                         property.setLabel(presentation.label());
-                                        property.setItemcount(BigInteger.valueOf(itemCount));
-                                        testform.getPoolproperty().add(property);
+                                        testform.getProperty().add(property);
                                         testFormMap.put(testFormId, testform);
 
                                     } else {
