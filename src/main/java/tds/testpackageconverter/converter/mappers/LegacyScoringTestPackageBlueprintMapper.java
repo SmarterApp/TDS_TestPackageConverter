@@ -84,6 +84,7 @@ public class LegacyScoringTestPackageBlueprintMapper {
                     final Bpelement firstBpEl = bpElements.get(0);
 
                     combinedBpEl.setElementtype(firstBpEl.getElementtype());
+                    combinedBpEl.setParentid(firstBpEl.getParentid());
 
                     // sum the item counts
                     combinedBpEl.setMinftitems(BigInteger.valueOf(bpElements.stream()
@@ -145,8 +146,12 @@ public class LegacyScoringTestPackageBlueprintMapper {
                                     .sum()));
 
                             final Identifier identifier = new Identifier();
-                            identifier.setUniqueid(TestPackageUtils.getCombinedKey(testPackage, segment.getId()));
-                            identifier.setName(TestPackageUtils.getCombinedId(segment.getId()));
+                            identifier.setUniqueid(testPackage.getAssessments().size() > 1
+                                    ? TestPackageUtils.getCombinedKey(testPackage, segment.getId())
+                                    : TestPackageUtils.getAssessmentKey(testPackage, segment.getId()));
+                            identifier.setName(testPackage.getAssessments().size() > 1
+                                    ? TestPackageUtils.getCombinedId(segment.getId())
+                                    : segment.getId());
                             identifier.setVersion(new BigDecimal(testPackage.getVersion()));
                             segmentBpElement.setIdentifier(identifier);
 
