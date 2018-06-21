@@ -51,11 +51,21 @@ public class LegacyScoringTestPackageBlueprintMapper {
         testPackageBpElement.setFtitemcount(BigInteger.valueOf(segmentBlueprintElements.stream()
                 .mapToInt(bpEl -> bpEl.getFtitemcount() != null ? bpEl.getFtitemcount().intValue() : 0).sum()));
 
-        final Identifier identifier = new Identifier();
-        identifier.setUniqueid(TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId()));
-        identifier.setName(testPackage.getId());
-        identifier.setVersion(new BigDecimal(testPackage.getVersion()));
-        testPackageBpElement.setIdentifier(identifier);
+        if (segmentBlueprintElements.size() > 1) {
+            // Multi segment assessment
+            final Identifier identifier = new Identifier();
+            identifier.setUniqueid(TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId()));
+            identifier.setName(testPackage.getId());
+            identifier.setVersion(new BigDecimal(testPackage.getVersion()));
+            testPackageBpElement.setIdentifier(identifier);
+        } else {
+            // Single segment assessment - segment/test ids should match
+            final Identifier identifier = new Identifier();
+            identifier.setUniqueid(segmentBlueprintElements.get(0).getIdentifier().getUniqueid());
+            identifier.setName(segmentBlueprintElements.get(0).getIdentifier().getName());
+            identifier.setVersion(new BigDecimal(testPackage.getVersion()));
+            testPackageBpElement.setIdentifier(identifier);
+        }
 
         bpElements.add(testPackageBpElement);
         bpElements.addAll(segmentBlueprintElements);

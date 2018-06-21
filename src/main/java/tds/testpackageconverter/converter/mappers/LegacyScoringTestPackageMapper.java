@@ -106,11 +106,19 @@ public class LegacyScoringTestPackageMapper {
                 .forEach(blueprintElement -> blueprintElement.getScoring().get().getRules()
                         .forEach(rule -> {
                             final Computationrule legacyRule = new Computationrule();
-                            legacyRule.setBpelementid(testPackage.getId().equals(blueprintElement.getId())
-                                    ? TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId())
-                                    : bpElementsMap.containsKey(blueprintElement.getId())
+                            // If the element is a test/segment, get the "combined" blueprint element id. Otherwise, just find the blueprint
+                            // element uniqueId that corresponds to the blueprint element name in the legacy blueprint
+                            if (blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.PACKAGE)) {
+                                legacyRule.setBpelementid(TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId()));
+                            } else if (blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.TEST) ||
+                                    blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.SEGMENT)) {
+                                legacyRule.setBpelementid(TestPackageUtils.getCombinedKey(testPackage, blueprintElement.getId()));
+                            } else {
+                                legacyRule.setBpelementid(bpElementsMap.containsKey(blueprintElement.getId())
                                         ? bpElementsMap.get(blueprintElement.getId())
                                         : blueprintElement.getId());
+                            }
+
                             legacyRule.setComputationorder(BigInteger.valueOf(rule.getComputationOrder()));
 
                             final Identifier identifier = new Identifier();
