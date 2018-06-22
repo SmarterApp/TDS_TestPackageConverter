@@ -39,9 +39,12 @@ public class LegacyScoringTestPackageMapper {
 
         // Map Identifier
         final Identifier testSpecIdentifier = new Identifier();
-        testSpecIdentifier.setUniqueid(String.format("(%s)%s-%s", testPackage.getPublisher(),
-                testPackage.getId(), testPackage.getAcademicYear()));
-        testSpecIdentifier.setName(testPackage.getId());
+        testSpecIdentifier.setUniqueid(administrationPackages.size() > 1
+                ? String.format("(%s)%s-%s", testPackage.getPublisher(), testPackage.getId(), testPackage.getAcademicYear())
+                : administrationPackages.get(0).getIdentifier().getUniqueid());
+        testSpecIdentifier.setName(administrationPackages.size() > 1
+                ? testPackage.getId()
+                : administrationPackages.get(0).getIdentifier().getName());
         testSpecIdentifier.setVersion(version);
         testSpecIdentifier.setLabel(testPackage.getId());
         scoringSpecification.setIdentifier(testSpecIdentifier);
@@ -106,11 +109,21 @@ public class LegacyScoringTestPackageMapper {
                 .forEach(blueprintElement -> blueprintElement.getScoring().get().getRules()
                         .forEach(rule -> {
                             final Computationrule legacyRule = new Computationrule();
-                            legacyRule.setBpelementid(testPackage.getId().equals(blueprintElement.getId())
-                                    ? TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId())
-                                    : bpElementsMap.containsKey(blueprintElement.getId())
+                            // If the element is a test/segment, get the "combined" blueprint element id. Otherwise, just find the blueprint
+                            // element uniqueId that corresponds to the blueprint element name in the legacy blueprint
+                            if (blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.PACKAGE)) {
+                                legacyRule.setBpelementid(TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId()));
+                            } else if (blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.TEST) ||
+                                    blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.SEGMENT)) {
+                                legacyRule.setBpelementid(testPackage.getAssessments().size() > 1
+                                        ? TestPackageUtils.getCombinedKey(testPackage, blueprintElement.getId())
+                                        : TestPackageUtils.getAssessmentKey(testPackage, blueprintElement.getId()));
+                            } else {
+                                legacyRule.setBpelementid(bpElementsMap.containsKey(blueprintElement.getId())
                                         ? bpElementsMap.get(blueprintElement.getId())
                                         : blueprintElement.getId());
+                            }
+
                             legacyRule.setComputationorder(BigInteger.valueOf(rule.getComputationOrder()));
 
                             final Identifier identifier = new Identifier();
@@ -178,12 +191,24 @@ public class LegacyScoringTestPackageMapper {
                 .filter(blueprintElement -> blueprintElement.getScoring().isPresent())
                 .forEach(blueprintElement -> blueprintElement.getScoring().get().performanceLevels()
                         .forEach(pl -> {
+
                             // If the blueprintId containing the performance levels is for a combined test package,
                             // simply use the test package id
                             final Performancelevel level = new Performancelevel();
-                            level.setBpelementid(testPackage.getId().equals(blueprintElement.getId())
-                                    ? TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId())
-                                    : bpElementsMap.get(blueprintElement.getId()));
+                            // If the element is a test/segment, get the "combined" blueprint element id. Otherwise, just find the blueprint
+                            // element uniqueId that corresponds to the blueprint element name in the legacy blueprint
+                            if (blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.PACKAGE)) {
+                                level.setBpelementid(TestPackageUtils.getAssessmentKey(testPackage, testPackage.getId()));
+                            } else if (blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.TEST) ||
+                                    blueprintElement.getType().equalsIgnoreCase(BlueprintElementTypes.SEGMENT)) {
+                                level.setBpelementid(testPackage.getAssessments().size() > 1
+                                        ? TestPackageUtils.getCombinedKey(testPackage, blueprintElement.getId())
+                                        : TestPackageUtils.getAssessmentKey(testPackage, blueprintElement.getId()));
+                            } else {
+                                level.setBpelementid(bpElementsMap.containsKey(blueprintElement.getId())
+                                        ? bpElementsMap.get(blueprintElement.getId())
+                                        : blueprintElement.getId());
+                            }
                             level.setPlevel(BigInteger.valueOf(pl.getPLevel()));
                             level.setScaledlo((float) pl.getScaledLo());
                             level.setScaledhi((float) pl.getScaledHi());

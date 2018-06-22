@@ -25,7 +25,9 @@ public class LegacyScoringTestPackageItemPoolMapper {
                         .filter(bpEl -> bpEl.getElementtype().equals("segment")))
                 .collect(Collectors.toMap(
                         bpEl -> bpEl.getIdentifier().getUniqueid(),
-                        bpEl -> TestPackageUtils.getCombinedKey(testPackage, bpEl.getIdentifier().getName())));
+                        bpEl -> administrationPackages.size() > 1
+                                ? TestPackageUtils.getCombinedKey(testPackage, bpEl.getIdentifier().getName())
+                                : TestPackageUtils.getAssessmentKey(testPackage, bpEl.getIdentifier().getName())));
 
         if (administrationPackages.size() == 1) {
             return administrationPackages.get(0).getAdministration().getItempool().getTestitem().stream()

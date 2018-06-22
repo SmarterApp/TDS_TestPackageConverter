@@ -89,6 +89,7 @@ public class LegacyAdministrationTestPackageFormMapper {
         final List<Itemgroup> legacyItemGroups = formPartition.getItemgroup();
 
         int formPosition = 1;
+        int itemGroupFormPosition = 1;
         for (ItemGroup itemGroup : form.itemGroups()) {
             // If the item group includes item with presentations that do not match, skip it
             if (itemGroup.items().stream().anyMatch(item -> !item.getPresentations().contains(presentation))) {
@@ -96,7 +97,7 @@ public class LegacyAdministrationTestPackageFormMapper {
             }
 
             final Itemgroup legacyItemGroup = new Itemgroup();
-            legacyItemGroup.setFormposition(String.valueOf(formPosition));
+            legacyItemGroup.setFormposition(String.valueOf(itemGroupFormPosition));
             legacyItemGroup.setMaxitems(itemGroup.maxItems());
             legacyItemGroup.setMaxresponses(itemGroup.maxResponses());
 
@@ -127,7 +128,7 @@ public class LegacyAdministrationTestPackageFormMapper {
                 groupItem.setBlockid("A");
                 legacyItemGroup.getGroupitem().add(groupItem);
             }
-
+            itemGroupFormPosition++;
             legacyItemGroups.add(legacyItemGroup);
         }
 
