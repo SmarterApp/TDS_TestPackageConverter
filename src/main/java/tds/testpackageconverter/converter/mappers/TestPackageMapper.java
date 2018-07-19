@@ -78,7 +78,11 @@ public class TestPackageMapper {
         // bank key and publisher information
         Testspecification testSpecification = adminTestPackages.get(0);
         return TestPackage.builder()
-                .setId(testPackageName.replace(".xml", ""))
+                // If the test package contains more than one admin file, use the provided test package filename as the ID
+                // Otherwise, let's just use the administration file's unique name (also known as the assessment id)
+                .setId(adminTestPackages.size() > 1
+                        ? testPackageName.replace(".xml", "")
+                        : adminTestPackages.get(0).getIdentifier().getName())
                 /* Attributes */
                 .setVersion(TestPackageUtils.parseVersion(testSpecification.getIdentifier().getVersion()))
                 .setPublisher(testSpecification.getPublisher())
