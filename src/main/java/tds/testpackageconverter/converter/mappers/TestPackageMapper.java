@@ -95,7 +95,7 @@ public class TestPackageMapper {
                 .setSubType(diff.isPresent() && diff.get().getSubType() != null
                         ? diff.get().getSubType()
                         : Optional.empty())
-                .setSubject(findSingleProperty(testSpecification.getProperty(), "subject"))
+                .setSubject(findSingleProperty(testSpecification.getProperty(), "subject").toUpperCase())
                 .setType(findSingleProperty(testSpecification.getProperty(), "type"))
                 .setBankKey(findBankKey(testSpecification.getAdministration()))
                 /* Child Elements */

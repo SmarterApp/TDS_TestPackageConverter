@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testspecification purpose="administration" publisher="SBAC_PT" publishdate="Aug 19 2015  3:44PM" version="1.0">
     <identifier uniqueid="(SBAC_PT)SBAC-IRP-CAT-MATH-11-Summer-2015-2016" name="SBAC-IRP-CAT-MATH-11" label="Grade 11 MATH" version="8185" />
-    <property name="subject" value="MATH" label="MATH" />
+    <property name="subject" value="Math" label="MATH" />
     <property name="grade" value="11" label="grade 11" />
     <property name="type" value="summative" label="summative" />
     <administration>
