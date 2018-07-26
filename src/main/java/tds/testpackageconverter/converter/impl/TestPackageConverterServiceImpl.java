@@ -42,7 +42,12 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
 
     @Override
     public void extractAndConvertTestSpecifications(final String testPackageName, final File file) throws IOException, ParseException {
-        ZipFile zipFile = new ZipFile(file);
+        ZipFile zipFile;
+        try {
+            zipFile = new ZipFile(file);
+        } catch(IOException e) {
+            throw new IOException(String.format("ERROR: Processing input test specification zip file: %s\n%s", file.getAbsolutePath(), e.getMessage()), e);
+        }
         File convertedTestPackageFile = new File(testPackageName);
 
         List<Testspecification> specifications = zipFile.stream()
@@ -65,7 +70,11 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
                 ? TestPackageMapper.toNew(testPackageName, specifications, diff.get())
                 : TestPackageMapper.toNew(testPackageName, specifications);
 
-        legacyXmlMapper.writeValue(convertedTestPackageFile, testPackage);
+        try {
+            legacyXmlMapper.writeValue(convertedTestPackageFile, testPackage);
+        } catch (IOException  e) {
+            throw new IOException(String.format("ERROR: Processing converted test specification output file: %s\n%s", convertedTestPackageFile.getAbsolutePath(), e.getMessage()), e);
+        }
 
         convertedTestPackageFile.createNewFile();
     }

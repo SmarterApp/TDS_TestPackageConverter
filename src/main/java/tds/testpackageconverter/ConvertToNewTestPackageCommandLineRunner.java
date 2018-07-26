@@ -178,15 +178,9 @@ public class ConvertToNewTestPackageCommandLineRunner implements CommandLineRunn
 
         try {
             service.extractAndConvertTestSpecifications(outputFilename, new File(cmd.getOptionValue(ZIP_FLAG)));
-            System.out.println("Finished converting the test package " + outputFilename);
-        } catch (FileNotFoundException e) {
-            System.out.println(String.format("ERROR: Zip file could not be found at path %s", cmd.getOptionValue(ZIP_FLAG)));
-
-            if (cmd.hasOption(VERBOSE_FLAG)) {
-                e.printStackTrace();
-            }
+            System.out.println("Finished converting the test package " + outputFilename);        
         } catch (Exception e) {
-            System.out.println(String.format("ERROR: Error opening or unzipping the test package zip file at path %s", cmd.getOptionValue(ZIP_FLAG)));
+            System.out.println(e.getMessage());
 
             if (cmd.hasOption(VERBOSE_FLAG)) {
                 e.printStackTrace();
