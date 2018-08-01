@@ -175,7 +175,9 @@ public class LegacyScoringTestPackageMapper {
         return param.getValues().stream()
                 .map(val -> {
                     final Computationruleparametervalue legacyVal = new Computationruleparametervalue();
-                    legacyVal.setIndex(String.valueOf(val.getIndex()));
+                    if (val.getIndex().isPresent()) {
+                        legacyVal.setIndex(String.valueOf(val.getIndex().get()));
+                    }
                     legacyVal.setValue(val.getValue());
                     return legacyVal;
                 })
