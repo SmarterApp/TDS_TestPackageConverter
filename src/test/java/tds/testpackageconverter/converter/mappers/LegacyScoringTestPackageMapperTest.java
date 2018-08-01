@@ -80,7 +80,18 @@ public class LegacyScoringTestPackageMapperTest extends LegacyTestPackageBaseTes
         assertThat(param.getIdentifier().getName()).isEqualTo("LOT");
         assertThat(param.getIdentifier().getVersion()).isEqualTo("1");
 
+
         assertThat(param.getComputationruleparametervalue()).hasSize(1);
         assertThat(param.getComputationruleparametervalue().get(0).getValue()).isEqualTo("-2.9114");
+
+        Computationrule accommodationCompRule = scoringPackage.getScoring().getScoringrules().getComputationrule().stream()
+                .filter(rule -> rule.getBpelementid().equals("(SBAC)SBAC-ICA-FIXED-G7E-COMBINED-2017-2018")
+                        && rule.getIdentifier().getName().equals("SBACAccommodationUseCodes"))
+                .findFirst().get();
+
+        Computationruleparametervalue accomomdationParamVal = accommodationCompRule.getComputationruleparameter().get(0)
+                .getComputationruleparametervalue().get(0);
+
+        assertThat(accomomdationParamVal.getIndex()).isEqualTo("Print Size");
     }
 }
