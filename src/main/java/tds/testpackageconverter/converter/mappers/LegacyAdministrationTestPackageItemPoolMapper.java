@@ -7,9 +7,9 @@ import tds.testpackageconverter.utils.TestPackageUtils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class LegacyAdministrationTestPackageItemPoolMapper {
@@ -21,7 +21,7 @@ public class LegacyAdministrationTestPackageItemPoolMapper {
     }
 
     private static List<Passage> mapPassages(final TestPackage testPackage, final Assessment assessment) {
-        final List<Stimulus> stimuli = assessment.getSegments().stream()
+        final Set<Stimulus> stimuli = assessment.getSegments().stream()
                 .flatMap(segment -> {
                     if (segment.getAlgorithmType().equalsIgnoreCase(Algorithm.FIXED_FORM.getType())) {
                         return segment.segmentForms().stream()
@@ -35,7 +35,7 @@ public class LegacyAdministrationTestPackageItemPoolMapper {
                                 .map(itemGroup -> itemGroup.getStimulus().get());
                     }
                 })
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
 
         return stimuli.stream().map(stimulus -> {
             final Passage passage = new Passage();
