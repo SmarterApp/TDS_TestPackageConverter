@@ -11,7 +11,7 @@
         <Rules>
           <Rule name="TestPerformanceLevel" computationOrder="35"/>
           <Rule name="ItemCountScored" computationOrder="100"/>
-          <Rule name="SBACTheta" computationOrder="20">
+          <Rule name="SBACTheta" measure="ThetaScore" computationOrder="20">
             <Parameter name="LOT" id="933D98F3-34BC-4957-8FAE-0B66CB0AB41E" type="double" position="1">
               <Value value="-2.9114"/>
             </Parameter>

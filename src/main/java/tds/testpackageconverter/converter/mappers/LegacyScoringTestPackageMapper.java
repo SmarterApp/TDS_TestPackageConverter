@@ -129,7 +129,7 @@ public class LegacyScoringTestPackageMapper {
                             final Identifier identifier = new Identifier();
                             identifier.setUniqueid(UUID.randomUUID().toString());
                             identifier.setName(rule.getName());
-                            identifier.setLabel(rule.getName());
+                            identifier.setLabel(rule.measure());
                             identifier.setVersion(new BigDecimal(1));
 
                             legacyRule.setIdentifier(identifier);

@@ -69,7 +69,7 @@ public class LegacyScoringTestPackageMapperTest extends LegacyTestPackageBaseTes
                 .findFirst().get();
 
         assertThat(testLevelCompRule.getIdentifier().getVersion()).isEqualTo("1");
-        assertThat(testLevelCompRule.getIdentifier().getLabel()).isEqualTo("SBACTheta");
+        assertThat(testLevelCompRule.getIdentifier().getLabel()).isEqualTo("ThetaScore");
         assertThat(testLevelCompRule.getIdentifier().getUniqueid()).isNotNull();
 
         assertThat(testLevelCompRule.getComputationruleparameter()).hasSize(3);
