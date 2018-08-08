@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 import tds.testpackage.legacy.model.Itempool;
+import tds.testpackage.legacy.model.Passage;
 import tds.testpackage.legacy.model.Testitem;
 import tds.testpackage.legacy.model.Testspecification;
 import tds.testpackageconverter.converter.LegacyTestPackageBaseTest;
@@ -30,9 +31,11 @@ public class LegacyScoringTestPackageItemPoolMapperTest extends LegacyTestPackag
         assertThat(itempool).isNotNull();
         assertThat(itempool.getPassage()).hasSize(9);
 
-        assertThat(itempool.getPassage().get(0).getIdentifier().getUniqueid()).isEqualTo("200-1433");
-        assertThat(itempool.getPassage().get(0).getIdentifier().getVersion()).isEqualTo("9787");
-        assertThat(itempool.getPassage().get(0).getFilename()).isEqualTo("stim-200-1433.xml");
+        Passage passage = itempool.getPassage().stream()
+                .filter(p -> p.getIdentifier().getUniqueid().equals("200-1433"))
+                .findFirst().get();
+        assertThat(passage.getIdentifier().getVersion()).isEqualTo("9787");
+        assertThat(passage.getFilename()).isEqualTo("stim-200-1433.xml");
 
         assertThat(itempool.getTestitem()).hasSize(48);
 
