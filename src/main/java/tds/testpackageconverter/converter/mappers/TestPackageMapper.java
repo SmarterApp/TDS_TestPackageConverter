@@ -81,7 +81,7 @@ public class TestPackageMapper {
                 // If the test package contains more than one admin file, use the provided test package filename as the ID
                 // Otherwise, let's just use the administration file's unique name (also known as the assessment id)
                 .setId(adminTestPackages.size() > 1
-                        ? testPackageName.replace(".xml", "")
+                        ? testPackageName
                         : adminTestPackages.get(0).getIdentifier().getName())
                 /* Attributes */
                 .setVersion(TestPackageUtils.parseVersion(testSpecification.getIdentifier().getVersion()))

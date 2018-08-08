@@ -1,21 +1,21 @@
 package tds.testpackageconverter.converter.impl;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
-import tds.testpackage.diff.TestPackageDiff;
-import tds.testpackageconverter.converter.mappers.LegacyAdministrationTestPackageMapper;
-import tds.testpackageconverter.converter.TestPackageConverterService;
-import tds.testpackageconverter.converter.mappers.LegacyScoringTestPackageMapper;
-import tds.testpackageconverter.converter.mappers.TestPackageDiffMapper;
-import tds.testpackageconverter.converter.mappers.TestPackageMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tds.support.tool.testpackage.configuration.TestPackageObjectMapperConfiguration;
+import tds.testpackage.diff.TestPackageDiff;
 import tds.testpackage.legacy.model.Testspecification;
 import tds.testpackage.model.TestPackage;
+import tds.testpackageconverter.converter.TestPackageConverterService;
+import tds.testpackageconverter.converter.mappers.LegacyAdministrationTestPackageMapper;
+import tds.testpackageconverter.converter.mappers.LegacyScoringTestPackageMapper;
+import tds.testpackageconverter.converter.mappers.TestPackageDiffMapper;
+import tds.testpackageconverter.converter.mappers.TestPackageMapper;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,14 +41,14 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
     }
 
     @Override
-    public void extractAndConvertTestSpecifications(final String testPackageName, final File file) throws IOException, ParseException {
+    public void extractAndConvertTestSpecifications(final String testPackagePath, final File file) throws IOException, ParseException {
         ZipFile zipFile;
         try {
             zipFile = new ZipFile(file);
-        } catch(IOException e) {
+        } catch (IOException e) {
             throw new IOException(String.format("ERROR: Processing input test specification zip file: %s\n%s", file.getAbsolutePath(), e.getMessage()), e);
         }
-        File convertedTestPackageFile = new File(testPackageName);
+        File convertedTestPackageFile = new File(testPackagePath);
 
         List<Testspecification> specifications = zipFile.stream()
                 .filter(entry -> !entry.isDirectory() && entry.getName().endsWith(".xml")
@@ -67,36 +67,35 @@ public class TestPackageConverterServiceImpl implements TestPackageConverterServ
                 .findFirst();
 
         TestPackage testPackage = diff.isPresent()
-                ? TestPackageMapper.toNew(testPackageName, specifications, diff.get())
-                : TestPackageMapper.toNew(testPackageName, specifications);
+                ? TestPackageMapper.toNew(FilenameUtils.getBaseName(testPackagePath), specifications, diff.get())
+                : TestPackageMapper.toNew(FilenameUtils.getBaseName(testPackagePath), specifications);
 
         try {
             legacyXmlMapper.writeValue(convertedTestPackageFile, testPackage);
-        } catch (IOException  e) {
+        } catch (IOException e) {
             throw new IOException(String.format("ERROR: Processing converted test specification output file: %s\n%s", convertedTestPackageFile.getAbsolutePath(), e.getMessage()), e);
         }
 
         convertedTestPackageFile.createNewFile();
     }
 
-
     @Override
-    public void convertTestSpecifications(final String testPackageName, final List<String> adminAndScoringFileNames) throws IOException, ParseException {
-        convertTestSpecifications(testPackageName, adminAndScoringFileNames, null);
+    public void convertTestSpecifications(final String testPackagePath, final List<String> adminAndScoringFileNames) throws IOException, ParseException {
+        convertTestSpecifications(testPackagePath, adminAndScoringFileNames, null);
     }
 
     @Override
-    public void convertTestSpecifications(final String testPackageName, final List<String> adminAndScoringFileNames,
+    public void convertTestSpecifications(final String testPackagePath, final List<String> adminAndScoringFileNames,
                                           final String diffFileName) throws IOException, ParseException {
-        File convertedTestPackageFile = new File(testPackageName);
+        File convertedTestPackageFile = new File(testPackagePath);
 
         List<Testspecification> specifications = adminAndScoringFileNames.stream()
                 .map(this::readTestSpecification)
                 .collect(Collectors.toList());
 
         TestPackage testPackage = diffFileName == null
-                ? TestPackageMapper.toNew(testPackageName, specifications)
-                : TestPackageMapper.toNew(testPackageName, specifications, readDiff(diffFileName));
+                ? TestPackageMapper.toNew(FilenameUtils.getBaseName(testPackagePath), specifications)
+                : TestPackageMapper.toNew(FilenameUtils.getBaseName(testPackagePath), specifications, readDiff(diffFileName));
         legacyXmlMapper.writeValue(convertedTestPackageFile, testPackage);
 
         convertedTestPackageFile.createNewFile();
