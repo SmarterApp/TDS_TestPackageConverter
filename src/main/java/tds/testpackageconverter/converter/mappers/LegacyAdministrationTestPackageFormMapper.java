@@ -5,7 +5,6 @@ import tds.common.Algorithm;
 import tds.testpackage.legacy.model.*;
 import tds.testpackage.legacy.model.Property;
 import tds.testpackage.model.*;
-import tds.testpackageconverter.utils.TestPackageUtils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -27,6 +26,8 @@ public class LegacyAdministrationTestPackageFormMapper {
                                 .forEach(presentation -> {
                                     final String testFormId = String.format("%s:%s-%s", assessment.getKey(), form.getCohort(), presentation.getCode());
 
+                                    int index = assessment.isSegmented() ? segment.position() : 0;
+
                                     if (!testFormMap.containsKey(testFormId)) {
                                         final Testform testform = new Testform();
                                         // Get the item count of the items with the same language
@@ -44,7 +45,7 @@ public class LegacyAdministrationTestPackageFormMapper {
                                         testFormIdentifier.setName(testFormId);
                                         testform.setIdentifier(testFormIdentifier);
                                         testform.getFormpartition().add(mapFormPartition(form, formIdToKeyMap, presentation,
-                                                testPackage.getVersion(), testPackage.getBankKey()));
+                                                testPackage.getVersion(), testPackage.getBankKey(), index));
 
                                         Property property = new Property();
                                         property.setName("Language");
@@ -65,7 +66,7 @@ public class LegacyAdministrationTestPackageFormMapper {
                                         final BigInteger newLength = BigInteger.valueOf(testform.getLength().longValue() + itemCount);
                                         testform.setLength(newLength);
                                         testform.getFormpartition().add(mapFormPartition(form, formIdToKeyMap, presentation,
-                                                testPackage.getVersion(), testPackage.getBankKey()));
+                                                testPackage.getVersion(), testPackage.getBankKey(), index));
 
                                     }
                                 })
@@ -77,7 +78,7 @@ public class LegacyAdministrationTestPackageFormMapper {
 
     private static Formpartition mapFormPartition(final SegmentForm form, final Map<String, Long> formIdToKeyMap,
                                                   final Presentation presentation,
-                                                  final String version, final int bankKey) {
+                                                  final String version, final int bankKey, final int index) {
         final Formpartition formPartition = new Formpartition();
         final Identifier formPartitionIdentifier = new Identifier();
         final String formId = form.id(presentation.getCode());
@@ -104,7 +105,7 @@ public class LegacyAdministrationTestPackageFormMapper {
             final Identifier itemGroupIdentifier = new Identifier();
 
             final String itemGroupId = itemGroup.getStimulus().isPresent()
-                    ? String.format("%s:G-%s-%s-0", formKey, bankKey, itemGroup.getId())
+                    ? String.format("%s:G-%s-%s-%s", formKey, bankKey, itemGroup.getId(), index)
                     : String.format("%s:I-%s-%s", formKey, bankKey, itemGroup.getId());
             itemGroupIdentifier.setUniqueid(itemGroupId);
             itemGroupIdentifier.setName(itemGroupId);
