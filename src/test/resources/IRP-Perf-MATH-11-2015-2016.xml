@@ -1,0 +1,113 @@
+<TestPackage id="SBAC-IRP-Perf-MATH-11" publisher="SBAC_PT" publishDate="2015-08-19T22:44:00Z" subject="MATH"
+             type="summative" version="8185" bankKey="187" academicYear="2018">
+    <Blueprint>
+        <BlueprintElement id="SBAC-IRP-Perf-MATH-11" type="test"/>
+        <BlueprintElement id="2" type="claim">
+            <BlueprintElement id="2|A-CED" type="target">
+                <BlueprintElement id="2|A-CED|A" type="target"/>
+            </BlueprintElement>
+            <BlueprintElement id="2|F-IF" type="target">
+                <BlueprintElement id="2|F-IF|A" type="target"/>
+            </BlueprintElement>
+        </BlueprintElement>
+        <BlueprintElement id="3" type="claim">
+            <BlueprintElement id="3|F-IF" type="target">
+                <BlueprintElement id="3|F-IF|B" type="target"/>
+            </BlueprintElement>
+        </BlueprintElement>
+        <BlueprintElement id="4" type="claim">
+            <BlueprintElement id="4|S-ID" type="target">
+                <BlueprintElement id="4|S-ID|A" type="target"/>
+            </BlueprintElement>
+        </BlueprintElement>
+    </Blueprint>
+    <Test id="SBAC-IRP-Perf-MATH-11" label="Grade 11 MATH">
+        <Grades>
+            <Grade value="11" label="grade 11"/>
+        </Grades>
+        <Segments>
+            <Segment position="1" id="SBAC-IRP-Perf-MATH-11" label="(SBAC_PT)SBAC-IRP-Perf-MATH-11-Summer-2015-2016"
+                     algorithmType="fixedform" algorithmImplementation="AIR FIXEDFORM1">
+                <SegmentBlueprint>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="2"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="3"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="4"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="2|A-CED"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="2|F-IF"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="3|F-IF"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="4|S-ID"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="2|A-CED|A"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="2|F-IF|A"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="3|F-IF|B"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0"
+                                             maxExamItems="7" idRef="4|S-ID|A"/>
+                    <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="7"
+                                             maxExamItems="7" idRef="SBAC-IRP-Perf-MATH-11">
+                        <ItemSelection>
+                            <Property name="slope" value="79.3"/>
+                            <Property name="intercept" value="2514.9"/>
+                        </ItemSelection>
+                    </SegmentBlueprintElement>
+                </SegmentBlueprint>
+                <SegmentForms>
+                    <SegmentForm id="IRP::MathG11::Perf::SP15" cohort="Default">
+                        <Presentations>
+                            <Presentation label="English" code="ENU"/>
+                        </Presentations>
+                        <ItemGroup maxItems="ALL" maxResponses="ALL" id="3688">
+                            <Stimulus id="3688"/>
+                            <Item active="true" fieldTest="false" administrationRequired="false"
+                                  responseRequired="false" handScored="false" doNotScore="false" id="1434" type="GI">
+                                <Presentations>
+                                    <Presentation label="English" code="ENU"/>
+                                </Presentations>
+                                <BlueprintReferences>
+                                    <BlueprintReference idRef="SBAC-IRP-Perf-MATH-11"/>
+                                    <BlueprintReference idRef="2"/>
+                                    <BlueprintReference idRef="2|F-IF"/>
+                                    <BlueprintReference idRef="2|F-IF|A"/>
+                                </BlueprintReferences>
+                                <ItemScoreDimensions>
+                                    <ItemScoreDimension weight="1.0" measurementModel="IRT3PLn" scorePoints="1">
+                                        <ItemScoreParameter value="0.6389300227165222" measurementParameter="a"/>
+                                        <ItemScoreParameter value="3.027329921722412" measurementParameter="b"/>
+                                        <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                                    </ItemScoreDimension>
+                                </ItemScoreDimensions>
+                            </Item>
+                            <Item active="true" fieldTest="false" administrationRequired="false"
+                                  responseRequired="false" handScored="false" doNotScore="false" id="1432" type="ER">
+                                <Presentations>
+                                    <Presentation label="English" code="ENU"/>
+                                </Presentations>
+                                <BlueprintReferences>
+                                    <BlueprintReference idRef="SBAC-IRP-Perf-MATH-11"/>
+                                    <BlueprintReference idRef="3"/>
+                                    <BlueprintReference idRef="3|F-IF"/>
+                                    <BlueprintReference idRef="3|F-IF|B"/>
+                                </BlueprintReferences>
+                                <ItemScoreDimensions>
+                                    <ItemScoreDimension weight="1.0" measurementModel="IRTGPC" scorePoints="2">
+                                        <ItemScoreParameter value="0.7479900121688843" measurementParameter="a"/>
+                                        <ItemScoreParameter value="-0.4015499949455261" measurementParameter="b0"/>
+                                        <ItemScoreParameter value="0.7623699903488159" measurementParameter="b1"/>
+                                    </ItemScoreDimension>
+                                </ItemScoreDimensions>
+                            </Item>
+                        </ItemGroup>
+                    </SegmentForm>
+                </SegmentForms>
+            </Segment>
+        </Segments>
+    </Test>
+</TestPackage>

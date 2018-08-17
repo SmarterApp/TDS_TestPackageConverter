@@ -1,0 +1,108 @@
+<TestPackageDiff bankKey="187" academicYear="2015-2016" subType="IRP">
+    <Test id="SBAC-IRP-Perf-MATH-11">
+        <Segments>
+            <Segment id="SBAC-IRP-Perf-MATH-11" label="SBAC IRP Performance Segment 1">
+                <Items>
+                    <Item id="1432" doNotScore="true" />
+                    <Item id="1434">
+                        <TeacherHandScoring exemplar="G3_2703_TM.pdf" trainingGuide="G3_2703_SG.pdf" layout="WAI" description="Mandatory Financial Literacy Classes - SBAC_Field">
+                            <Dimensions>
+                                <![CDATA[
+                                            [
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "CONVENTIONS",
+                                                    "maxPoints": "2",
+                                                    "minPoints": "0"
+                                                },
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "ELABORATION",
+                                                    "maxPoints": "3",
+                                                    "minPoints": "0"
+                                                },
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "ORGANIZATION",
+                                                    "maxPoints": "3",
+                                                    "minPoints": "0"
+                                                }
+                                            ]
+                                        ]]>
+                            </Dimensions>
+                        </TeacherHandScoring>
+                    </Item>
+                </Items>
+            </Segment>
+        </Segments>
+    </Test>
+    <Test id="SBAC-IRP-CAT-MATH-11">
+        <Segments>
+            <Segment id="SBAC-IRP-CAT-MATH-11">
+                <!-- Segment level tools -->
+                <Tools>
+                    <Tool name="Calculator">
+                        <Options>
+                            <Option code="TDS_Calc0" sortOrder="0" />
+                            <Option code="TDS_CalcSciInv" sortOrder="1" default="true" />
+                        </Options>
+                    </Tool>
+                </Tools>
+            </Segment>
+        </Segments>
+        <!-- Assessment level tools -->
+        <Tools>
+            <Tool name="Expandable Passages">
+                <Options>
+                    <Option code="TDS_ExpandablePassages0" sortOrder="0" />
+                    <Option code="TDS_ExpandablePassages1" sortOrder="1" />
+                </Options>
+            </Tool>
+            <Tool name="Mark for Review">
+                <Options>
+                    <Option code="TDS_MfR0" sortOrder="0" />
+                    <Option code="TDS_MfR1" sortOrder="1" default="true" />
+                </Options>
+            </Tool>
+        </Tools>
+    </Test>
+</TestPackageDiff>

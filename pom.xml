@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.opentestsystem.delivery</groupId>
+	<artifactId>tds-test-package-converter</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>tds-test-package-converter</name>
+	<description>TDS Test Package Converter Application</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.1.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<support-tool-client.version>4.1.16</support-tool-client.version>
+		<tds-common.version>5.0.4</tds-common.version>
+
+		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+		<maven.release.plugin.version>2.5.3</maven.release.plugin.version>
+		<maven.source.plugin.version>2.1.2</maven.source.plugin.version>
+	</properties>
+
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Utils -->
+		<dependency>
+			<groupId>commons-cli</groupId>
+			<artifactId>commons-cli</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- TDS -->
+		<dependency>
+			<groupId>org.opentestsystem.delivery</groupId>
+			<artifactId>tds-support-tool-client</artifactId>
+			<version>${support-tool-client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.opentestsystem.delivery</groupId>
+			<artifactId>tds-common-legacy</artifactId>
+			<version>${tds-common.version}</version>
+		</dependency>
+	</dependencies>
+
+    <scm>
+        <connection>scm:git:https://github.com/SmarterApp/TDS_TestPackageConverter.git</connection>
+        <developerConnection>scm:git:git://github.com/SmarterApp/TDS_TestPackageConverter.git</developerConnection>
+        <url>https://github.com/SmarterApp/TDS_TestPackageConverter</url>
+        <tag>HEAD</tag>
+    </scm>
+
+	<build>
+		<finalName>${project.name}-${build.time}</finalName>
+
+		<pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven.release.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven.source.plugin.version}</version>
+                </plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>1.4</version>
+				</plugin>
+			</plugins>
+        </pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<tagNameFormat>@{project.version}</tagNameFormat>
+					<useReleaseProfile>false</useReleaseProfile>
+					<releaseProfiles>release</releaseProfiles>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.10</version>
+				<executions>
+					<execution>
+						<id>timestamp-property</id>
+						<goals>
+							<goal>timestamp-property</goal>
+						</goals>
+						<configuration>
+							<name>build.time</name>
+							<pattern>MMddyyyyHHmm</pattern>
+							<locale>en_US</locale>
+							<timeZone>UTC</timeZone>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>airdev-releases</name>
+            <url>https://airdev.jfrog.io/airdev/libs-releases-local</url>
+        </repository>
+    </distributionManagement>
+
+</project>

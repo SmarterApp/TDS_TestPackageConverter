@@ -1,0 +1,533 @@
+<TestPackage id="SBAC-Mathematics-6" publisher="SBAC_PT" publishDate="2017-07-17T23:15:00Z" subject="MATH" type="summative" version="1" bankKey="187" academicYear="2018">
+  <Blueprint>
+    <BlueprintElement id="SBAC-Mathematics-6" type="test">
+      <BlueprintElement id="SBAC-SEG1-MATH-6" type="segment"/>
+      <BlueprintElement id="SBAC-SEG2-MATH-6" type="segment"/>
+    </BlueprintElement>
+    <BlueprintElement id="MA-Undesignated" type="claim"/>
+  </Blueprint>
+  <Test id="SBAC-Mathematics-6" label="G6 Math Practice Test">
+    <Grades>
+      <Grade value="6" label="grade 6"/>
+    </Grades>
+    <Segments>
+      <Segment position="1" id="SBAC-SEG1-MATH-6" label="(SBAC_PT)SBAC-SEG1-MATH-6-Fall-2017-2018" algorithmType="fixedform" algorithmImplementation="AIR FIXEDFORM1">
+        <SegmentBlueprint>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" idRef="MA-Undesignated" minExamItems="8" maxExamItems="8"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" idRef="SBAC-SEG1-MATH-6" minExamItems="8" maxExamItems="8">
+            <ItemSelection>
+              <Property name="slope" value="1"/>
+              <Property name="intercept" value="1"/>
+            </ItemSelection>
+          </SegmentBlueprintElement>
+        </SegmentBlueprint>
+        <SegmentForms>
+          <SegmentForm id="PracTest::MG6::S1::FA17" cohort="Default">
+            <Presentations>
+              <Presentation label="Braille" code="ENU-Braille"/>
+              <Presentation label="Spanish" code="ESN"/>
+              <Presentation label="English" code="ENU"/>
+            </Presentations>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3264">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3264" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3387">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3387" type="MI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3495">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3495" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3585">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3585" type="MI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3459">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3459" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3262">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3262" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3206">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3206" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3623">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3623" type="MS">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG1-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+          </SegmentForm>
+        </SegmentForms>
+      </Segment>
+      <Segment position="2" id="SBAC-SEG2-MATH-6" label="(SBAC_PT)SBAC-SEG2-MATH-6-Fall-2017-2018" algorithmType="fixedform" algorithmImplementation="AIR FIXEDFORM1">
+        <SegmentBlueprint>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" idRef="MA-Undesignated" minExamItems="19" maxExamItems="22"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" idRef="SBAC-SEG2-MATH-6" minExamItems="19" maxExamItems="22">
+            <ItemSelection>
+              <Property name="slope" value="1"/>
+              <Property name="intercept" value="1"/>
+            </ItemSelection>
+          </SegmentBlueprintElement>
+        </SegmentBlueprint>
+        <SegmentForms>
+          <SegmentForm id="PracTest::MG6::S2::FA17" cohort="Default">
+            <Presentations>
+              <Presentation label="Braille" code="ENU-Braille"/>
+              <Presentation label="Spanish" code="ESN"/>
+              <Presentation label="English" code="ENU"/>
+            </Presentations>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3499">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3499" type="TI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3503">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3503" type="GI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3332">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3332" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3447">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3447" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3399">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3399" type="GI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3236">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3236" type="GI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3573">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3573" type="MS">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3256">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3256" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3501">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3501" type="TI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3204">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3204" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3557">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3557" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3629">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3629" type="MI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3541">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3541" type="MI">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3397">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3397" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3336">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3336" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3615">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3615" type="MS">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3595">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3595" type="MS">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3511">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3511" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3326">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3326" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3493">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3493" type="EQ">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3674">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3674" type="MS">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="3565">
+              <Item fieldTest="true" administrationRequired="true" responseRequired="true" handScored="false" doNotScore="false" active="true" id="3565" type="SA">
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-SEG2-MATH-6"/>
+                  <BlueprintReference idRef="MA-Undesignated"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension scorePoints="1" measurementModel="RAWSCORE" weight="1.0"/>
+                </ItemScoreDimensions>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="Spanish" code="ESN"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+              </Item>
+            </ItemGroup>
+          </SegmentForm>
+        </SegmentForms>
+      </Segment>
+    </Segments>
+  </Test>
+</TestPackage>

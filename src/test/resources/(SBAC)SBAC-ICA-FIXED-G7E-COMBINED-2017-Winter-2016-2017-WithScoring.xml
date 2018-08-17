@@ -1,0 +1,1848 @@
+<TestPackage id="SBAC-ICA-FIXED-G7E-COMBINED-2017" publisher="SBAC" publishDate="2016-06-16T00:40:00Z" subject="ELA" type="interim" version="9787" bankKey="200" academicYear="2018" subType="ICA">
+  <Blueprint>
+    <BlueprintElement id="SBAC-ICA-FIXED-G7E-COMBINED-2017" type="package">
+      <Scoring>
+        <PerformanceLevels>
+          <PerformanceLevel pLevel="1" scaledLo="2258.0" scaledHi="2479.0"/>
+          <PerformanceLevel pLevel="2" scaledLo="2479.0" scaledHi="2552.0"/>
+          <PerformanceLevel pLevel="3" scaledLo="2552.0" scaledHi="2649.0"/>
+          <PerformanceLevel pLevel="4" scaledLo="2649.0" scaledHi="2745.0"/>
+        </PerformanceLevels>
+        <Rules>
+          <Rule name="TestPerformanceLevel" computationOrder="35"/>
+          <Rule name="ItemCountScored" computationOrder="100"/>
+          <Rule name="SBACTheta" measure="ThetaScore" computationOrder="20">
+            <Parameter name="LOT" id="933D98F3-34BC-4957-8FAE-0B66CB0AB41E" type="double" position="1">
+              <Value value="-2.9114"/>
+            </Parameter>
+            <Parameter name="HOT" id="11D307FC-7B83-4ECC-AAF8-C5E1445897C8" type="double" position="2">
+              <Value value="2.7547"/>
+            </Parameter>
+            <Parameter name="seLimit" id="E766945F-93FF-4671-B21D-ADCEFDB02AF3" type="double" position="3">
+              <Value value="2.5"/>
+            </Parameter>
+          </Rule>
+          <Rule name="SBACAttemptedness" computationOrder="10">
+            <Parameter name="testPart" id="1511FAA2-FB95-4E48-ACA9-7E73AB947D33" type="int" position="1">
+              <Property name="indextype" value="string"/>
+              <Value value="1" index="SBAC-ICA-FIXED-G7E-COMBINED-ELA-7"/>
+              <Value value="2" index="SBAC-ICA-FIXED-G7E-Perf-TechInClassA-COMBINED-ELA-7"/>
+              <Value value="2" index="SBAC-ICA-FIXED-G7E-Perf-TechInClassB-COMBINED-ELA-7"/>
+            </Parameter>
+          </Rule>
+          <Rule name="ItemCount" computationOrder="90"/>
+          <Rule name="SBACAccommodationUseCodes" computationOrder="300">
+            <Parameter name="accomNoCodes" id="A04CEA62-7A8C-4C39-859D-CEDA15FAA0AA" type="string" position="1">
+              <Property name="indextype" value="string"/>
+              <Value value="TDS_PS_L0" index="Print Size"/>
+            </Parameter>
+          </Rule>
+          <Rule name="ScaleScore" computationOrder="30"/>
+          <Rule name="RawScore" computationOrder="110"/>
+        </Rules>
+      </Scoring>
+      <BlueprintElement id="SBAC-ICA-FIXED-G7E-ELA-7" type="test"/>
+      <BlueprintElement id="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroom" type="test">
+        <BlueprintElement id="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomA-ELA-7" type="segment"/>
+        <BlueprintElement id="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomB-ELA-7" type="segment"/>
+      </BlueprintElement>
+    </BlueprintElement>
+    <BlueprintElement id="SOCK_R" type="sock">
+      <Scoring>
+        <Rules>
+          <Rule name="MultiStrandRawScore" computationOrder="142">
+            <Parameter name="subscales" id="0F564274-3BBC-4A78-A363-71ACFEB12D55" type="string" position="1">
+              <Property name="indextype" value="int"/>
+              <Value value="1-IT" index="1"/>
+              <Value value="1-LT" index="2"/>
+            </Parameter>
+          </Rule>
+          <Rule name="MultipleStrandItemCount" computationOrder="122">
+            <Parameter name="subscales" id="1360E978-9481-4AC6-A5D6-6A0E2042292B" type="string" position="1">
+              <Property name="indextype" value="int"/>
+              <Value value="1-IT" index="1"/>
+              <Value value="1-LT" index="2"/>
+            </Parameter>
+          </Rule>
+          <Rule name="MultipleStrandItemCountScored" computationOrder="132">
+            <Parameter name="subscales" id="AE57944A-5F49-4849-8744-A0C5A3F3EC10" type="string" position="1">
+              <Property name="indextype" value="int"/>
+              <Value value="1-IT" index="1"/>
+              <Value value="1-LT" index="2"/>
+            </Parameter>
+          </Rule>
+          <Rule name="ScaleScore" computationOrder="52"/>
+          <Rule name="SBACMultiStrandTheta" computationOrder="42">
+            <Parameter name="LOT" id="2BA8722F-BA15-42B1-B33B-88BC3578846D" type="double" position="1">
+              <Value value="-2.9114"/>
+            </Parameter>
+            <Parameter name="HOT" id="7BBC58A2-CD87-4543-A9E1-A0EAC9021049" type="double" position="2">
+              <Value value="2.7547"/>
+            </Parameter>
+            <Parameter name="seLimit" id="CD0140A4-FF7F-4B7D-946E-688695B29929" type="double" position="3">
+              <Value value="2.5"/>
+            </Parameter>
+            <Parameter name="strands" id="111B0A47-379F-49B2-B704-6D968C64DDCE" type="string" position="4">
+              <Property name="indextype" value="int"/>
+              <Value value="1-IT" index="1"/>
+              <Value value="1-LT" index="2"/>
+            </Parameter>
+          </Rule>
+          <Rule name="SEBasedPerformanceIndicator" computationOrder="82">
+            <Parameter name="seMultiple" id="9DD7BF3C-48FA-483B-9CAE-706A8BB7D0D3" type="double" position="1">
+              <Value value="1.5"/>
+            </Parameter>
+            <Parameter name="proficientPerformanceLevel" id="EDE62A62-2A7F-4E73-87B6-331A995B6FAB" type="int" position="2">
+              <Value value="3"/>
+            </Parameter>
+          </Rule>
+        </Rules>
+      </Scoring>
+    </BlueprintElement>
+    <BlueprintElement id="SOCK_LS" type="sock">
+      <Scoring>
+        <Rules>
+          <Rule name="ScaleScore" computationOrder="53"/>
+          <Rule name="MultipleStrandItemCountScored" computationOrder="133">
+            <Parameter name="subscales" id="AE57944A-5F49-4849-8744-A0C5A3F3EC10" type="string" position="1">
+              <Property name="indextype" value="int"/>
+              <Value value="3-L" index="1"/>
+              <Value value="3-S" index="2"/>
+            </Parameter>
+          </Rule>
+          <Rule name="SEBasedPerformanceIndicator" computationOrder="83">
+            <Parameter name="seMultiple" id="9DD7BF3C-48FA-483B-9CAE-706A8BB7D0D3" type="double" position="1">
+              <Value value="1.5"/>
+            </Parameter>
+            <Parameter name="proficientPerformanceLevel" id="EDE62A62-2A7F-4E73-87B6-331A995B6FAB" type="int" position="2">
+              <Value value="3"/>
+            </Parameter>
+          </Rule>
+          <Rule name="MultiStrandRawScore" computationOrder="143">
+            <Parameter name="subscales" id="0F564274-3BBC-4A78-A363-71ACFEB12D55" type="string" position="1">
+              <Property name="indextype" value="int"/>
+              <Value value="3-L" index="1"/>
+              <Value value="3-S" index="2"/>
+            </Parameter>
+          </Rule>
+          <Rule name="SBACMultiStrandTheta" computationOrder="43">
+            <Parameter name="LOT" id="2BA8722F-BA15-42B1-B33B-88BC3578846D" type="double" position="1">
+              <Value value="-2.9114"/>
+            </Parameter>
+            <Parameter name="HOT" id="7BBC58A2-CD87-4543-A9E1-A0EAC9021049" type="double" position="2">
+              <Value value="2.7547"/>
+            </Parameter>
+            <Parameter name="seLimit" id="CD0140A4-FF7F-4B7D-946E-688695B29929" type="double" position="3">
+              <Value value="2.5"/>
+            </Parameter>
+            <Parameter name="strands" id="111B0A47-379F-49B2-B704-6D968C64DDCE" type="string" position="4">
+              <Property name="indextype" value="int"/>
+              <Value value="3-L" index="1"/>
+              <Value value="3-S" index="2"/>
+            </Parameter>
+          </Rule>
+          <Rule name="MultipleStrandItemCount" computationOrder="123">
+            <Parameter name="subscales" id="1360E978-9481-4AC6-A5D6-6A0E2042292B" type="string" position="1">
+              <Property name="indextype" value="int"/>
+              <Value value="3-L" index="1"/>
+              <Value value="3-S" index="2"/>
+            </Parameter>
+          </Rule>
+        </Rules>
+      </Scoring>
+    </BlueprintElement>
+    <BlueprintElement id="1-IT" type="claim">
+      <BlueprintElement id="1-IT|10-7" type="target"/>
+      <BlueprintElement id="1-IT|11-7" type="target"/>
+      <BlueprintElement id="1-IT|13-7" type="target"/>
+      <BlueprintElement id="1-IT|14-7" type="target"/>
+      <BlueprintElement id="1-IT|8-7" type="target"/>
+      <BlueprintElement id="1-IT|9-7" type="target"/>
+    </BlueprintElement>
+    <BlueprintElement id="1-LT" type="claim">
+      <BlueprintElement id="1-LT|2-7" type="target"/>
+      <BlueprintElement id="1-LT|3-7" type="target"/>
+      <BlueprintElement id="1-LT|4-7" type="target"/>
+      <BlueprintElement id="1-LT|5-7" type="target"/>
+      <BlueprintElement id="1-LT|6-7" type="target"/>
+      <BlueprintElement id="1-LT|7-7" type="target"/>
+    </BlueprintElement>
+    <BlueprintElement id="2-W" type="claim">
+      <Scoring>
+        <Rules>
+          <Rule name="ItemCount" computationOrder="120"/>
+          <Rule name="ScaleScore" computationOrder="50"/>
+          <Rule name="SBACTheta" computationOrder="40">
+            <Parameter name="LOT" id="933D98F3-34BC-4957-8FAE-0B66CB0AB41E" type="double" position="1">
+              <Value value="-2.9114"/>
+            </Parameter>
+            <Parameter name="HOT" id="11D307FC-7B83-4ECC-AAF8-C5E1445897C8" type="double" position="2">
+              <Value value="2.7547"/>
+            </Parameter>
+            <Parameter name="seLimit" id="E766945F-93FF-4671-B21D-ADCEFDB02AF3" type="double" position="3">
+              <Value value="2.5"/>
+            </Parameter>
+          </Rule>
+          <Rule name="RawScore" computationOrder="140"/>
+          <Rule name="ItemCountScored" computationOrder="130"/>
+          <Rule name="SEBasedPerformanceIndicator" computationOrder="80">
+            <Parameter name="seMultiple" id="9DD7BF3C-48FA-483B-9CAE-706A8BB7D0D3" type="double" position="1">
+              <Value value="1.5"/>
+            </Parameter>
+            <Parameter name="proficientPerformanceLevel" id="EDE62A62-2A7F-4E73-87B6-331A995B6FAB" type="int" position="2">
+              <Value value="3"/>
+            </Parameter>
+          </Rule>
+        </Rules>
+      </Scoring>
+      <BlueprintElement id="2-W|1-7" type="target"/>
+      <BlueprintElement id="2-W|6-7" type="target"/>
+      <BlueprintElement id="2-W|8-7" type="target"/>
+      <BlueprintElement id="2-W|9-7" type="target"/>
+      <BlueprintElement id="2-W|4-7" type="target"/>
+    </BlueprintElement>
+    <BlueprintElement id="3-L" type="claim">
+      <BlueprintElement id="3-L|4-7" type="target"/>
+    </BlueprintElement>
+    <BlueprintElement id="4-CR" type="claim">
+      <Scoring>
+        <Rules>
+          <Rule name="ScaleScore" computationOrder="51"/>
+          <Rule name="RawScore" computationOrder="141"/>
+          <Rule name="SEBasedPerformanceIndicator" computationOrder="81">
+            <Parameter name="seMultiple" id="9DD7BF3C-48FA-483B-9CAE-706A8BB7D0D3" type="double" position="1">
+              <Value value="1.5"/>
+            </Parameter>
+            <Parameter name="proficientPerformanceLevel" id="EDE62A62-2A7F-4E73-87B6-331A995B6FAB" type="int" position="2">
+              <Value value="3"/>
+            </Parameter>
+          </Rule>
+          <Rule name="ItemCountScored" computationOrder="131"/>
+          <Rule name="SBACTheta" computationOrder="41">
+            <Parameter name="LOT" id="933D98F3-34BC-4957-8FAE-0B66CB0AB41E" type="double" position="1">
+              <Value value="-2.9114"/>
+            </Parameter>
+            <Parameter name="HOT" id="11D307FC-7B83-4ECC-AAF8-C5E1445897C8" type="double" position="2">
+              <Value value="2.7547"/>
+            </Parameter>
+            <Parameter name="seLimit" id="E766945F-93FF-4671-B21D-ADCEFDB02AF3" type="double" position="3">
+              <Value value="2.5"/>
+            </Parameter>
+          </Rule>
+          <Rule name="ItemCount" computationOrder="121"/>
+        </Rules>
+      </Scoring>
+      <BlueprintElement id="4-CR|2-7" type="target"/>
+      <BlueprintElement id="4-CR|3-7" type="target"/>
+      <BlueprintElement id="4-CR|4-7" type="target"/>
+    </BlueprintElement>
+  </Blueprint>
+  <Test id="SBAC-ICA-FIXED-G7E-ELA-7" label="ICA-G7E">
+    <Grades>
+      <Grade value="7" label="grade 7"/>
+    </Grades>
+    <Segments>
+      <Segment entryApproval="false" exitApproval="false" position="1" id="SBAC-ICA-FIXED-G7E-ELA-7" label="(SBAC)SBAC-ICA-FIXED-G7E-ELA-7-Winter-2016-2017" algorithmType="fixedform" algorithmImplementation="AIR FIXEDFORM1">
+        <SegmentBlueprint>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-IT"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-LT"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="2-W"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="3-L"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="4-CR"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-IT|10-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-IT|11-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-IT|13-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-IT|14-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-IT|8-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-IT|9-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-LT|2-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-LT|3-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-LT|4-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-LT|5-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-LT|6-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="1-LT|7-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="2-W|1-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="2-W|6-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="2-W|8-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="2-W|9-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="3-L|4-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="4-CR|2-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="4-CR|3-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="45" idRef="4-CR|4-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="44" maxExamItems="44" idRef="SBAC-ICA-FIXED-G7E-ELA-7">
+            <ItemSelection>
+              <Property name="slope" value="85.8"/>
+              <Property name="intercept" value="2508.2"/>
+            </ItemSelection>
+          </SegmentBlueprintElement>
+        </SegmentBlueprint>
+        <SegmentForms>
+          <SegmentForm id="ELA ICA G7 2017 ENG" cohort="Default">
+            <Presentations>
+              <Presentation label="Braille" code="ENU-Braille"/>
+              <Presentation label="English" code="ENU"/>
+            </Presentations>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="35062">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="35062" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|8-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7416800260543823" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.6420000195503235" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="29311">
+              <Item active="true" doNotScore="true" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="29311" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.4653800129890442" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.0903099998831749" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="58227">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="58227" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|1-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.6336299777030945" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.18275000154972076" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+                <TeacherHandScoring exemplar="G3_2703_TM.pdf" trainingGuide="G3_2703_SG.pdf" layout="WAI" description="Mandatory Financial Literacy Classes - SBAC_Field">
+                  <Dimensions>
+                    <![CDATA[
+                                            [
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "CONVENTIONS",
+                                                    "maxPoints": "2",
+                                                    "minPoints": "0"
+                                                },
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "ELABORATION",
+                                                    "maxPoints": "3",
+                                                    "minPoints": "0"
+                                                },
+                                                {
+                                                    "conditions": [
+                                                    {
+                                                        "code": "B",
+                                                        "description": "Blank"
+                                                    },
+                                                    {
+                                                        "code": "I",
+                                                        "description": "Insufficient"
+                                                    },
+                                                    {
+                                                        "code": "L",
+                                                        "description": "Non-Scorable Language"
+                                                    }
+                                                    ],
+                                                    "description": "ORGANIZATION",
+                                                    "maxPoints": "3",
+                                                    "minPoints": "0"
+                                                }
+                                            ]
+                                        ]]>
+                  </Dimensions>
+                </TeacherHandScoring>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="1433">
+              <Stimulus id="1433"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="45280" type="HTQ">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Easy"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|8-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.5620499849319458" measurementParameter="a"/>
+                    <ItemScoreParameter value="-1.1555800437927246" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="45276" type="EBSR">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="4"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|11-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.6138200163841248" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.2537699937820435" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="33998">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="true" id="33998" type="SA">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="HandScored"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|1-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRTGPC" scorePoints="2" weight="1.0">
+                    <ItemScoreParameter value="0.4994800090789795" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.29679998755455017" measurementParameter="b0"/>
+                    <ItemScoreParameter value="1.1973600387573242" measurementParameter="b1"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="570">
+              <Stimulus id="570"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="25315" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Easy"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.34011998772621155" measurementParameter="a"/>
+                    <ItemScoreParameter value="-1.101099967956543" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="25319" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.5269200205802917" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.0047900001518428326" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="25317" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.45030999183654785" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.7771600484848022" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="29265">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="29265" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|3-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.34856000542640686" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.07920999825000763" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="36443">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="36443" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|9-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.6281800270080566" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.4470000267028809" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="1855">
+              <Stimulus id="1855"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="55265" type="HTQ">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|3-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7497400045394897" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.38624000549316406" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="55261" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|2-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7429900169372559" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.09820999950170517" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="63740" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|5-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.3902600109577179" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.09873999655246735" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="55275" type="EBSR">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7135499715805054" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.29006001353263855" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="55263" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|6-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.29117000102996826" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.571690022945404" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="14539">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="14539" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|9-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.3074899911880493" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.9631900191307068" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="711">
+              <Stimulus id="711"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="27857" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.3924599885940552" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.5407999753952026" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="27861" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.557640016078949" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.11219999939203262" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="27859" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.3396399915218353" measurementParameter="a"/>
+                    <ItemScoreParameter value="2.508349895477295" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="16391">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="16391" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|2-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.42438000440597534" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.05378999933600426" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="14557">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="14557" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|9-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.3812299966812134" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.21105000376701355" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="1673">
+              <Stimulus id="1673"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="true" id="51828" type="SA">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="4"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="HandScored"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRTGPC" scorePoints="2" weight="1.0">
+                    <ItemScoreParameter value="0.8343700170516968" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.0754599571228027" measurementParameter="b0"/>
+                    <ItemScoreParameter value="2.737920045852661" measurementParameter="b1"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="51826" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|6-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.595770001411438" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.02005000039935112" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="51818" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-LT"/>
+                  <BlueprintReference idRef="1-LT|7-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.33649998903274536" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.95906001329422" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="14601">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="14601" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|9-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.41923999786376953" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.3969700038433075" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="1172">
+              <Stimulus id="1172"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="37083" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.3934899866580963" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.19844000041484833" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="37081" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.5808899998664856" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.6558899879455566" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="37085" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="Y"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="3-L"/>
+                  <BlueprintReference idRef="3-L|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.40828999876976013" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.8887100219726562" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="16399">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="16399" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|2-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.42934998869895935" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.0428199768066406" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="61547">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="61547" type="HTQ">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|6-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.5228099822998047" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.5999000072479248" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="1215">
+              <Stimulus id="1215"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="37637" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|8-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.35124000906944275" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.4797999858856201" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="62585" type="EBSR">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="4"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|11-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7019199728965759" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.2433300018310547" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="62589" type="MC">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|14-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.40994998812675476" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.8570799827575684" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="37645" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|13-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7479100227355957" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.911549985408783" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="37641" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|9-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.34104999899864197" measurementParameter="a"/>
+                    <ItemScoreParameter value="2.149780035018921" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="44772">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="44772" type="HTQ">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|8-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.6947399973869324" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.4000999927520752" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="16393">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="16393" type="HTQ">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|2-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.44683000445365906" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.4641200304031372" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="0" id="33701">
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="true" responseRequired="true" handScored="false" id="33701" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|9-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.4745500087738037" measurementParameter="a"/>
+                    <ItemScoreParameter value="2.1326699256896973" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="660">
+              <Stimulus id="660"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="26688" type="EBSR">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|9-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.9083999991416931" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.01355000026524067" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="26627" type="HTQ">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="1"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|10-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.38995999097824097" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.01706000044941902" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="26686" type="HTQ">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|8-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7337899804115295" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.6508299708366394" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="27939" type="MS">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="2"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Moderate"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Key(s)"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|8-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.8162800073623657" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.0090899467468262" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="true" id="26629" type="SA">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="4"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="HandScored"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-ELA-7"/>
+                  <BlueprintReference idRef="1-IT"/>
+                  <BlueprintReference idRef="1-IT|11-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRTGPC" scorePoints="2" weight="1.0">
+                    <ItemScoreParameter value="0.8769500255584717" measurementParameter="a"/>
+                    <ItemScoreParameter value="0.6593300104141235" measurementParameter="b0"/>
+                    <ItemScoreParameter value="2.248070001602173" measurementParameter="b1"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+          </SegmentForm>
+        </SegmentForms>
+      </Segment>
+    </Segments>
+    <Tools>
+      <Tool name="Expandable Passages">
+        <Options>
+          <Option code="TDS_ExpandablePassages0" sortOrder="0" />
+          <Option code="TDS_ExpandablePassages1" sortOrder="1" />
+        </Options>
+      </Tool>
+      <Tool name="Mark for Review">
+        <Options>
+          <Option code="TDS_MfR0" sortOrder="0" />
+          <Option code="TDS_MfR1" sortOrder="1" default="true" />
+        </Options>
+      </Tool>
+    </Tools>
+  </Test>
+  <Test id="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroom" label="ICA-G7E-Perf">
+    <Grades>
+      <Grade value="7" label="grade 7"/>
+    </Grades>
+    <Segments>
+      <Segment entryApproval="false" exitApproval="false" position="1" id="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomA-ELA-7" label="(SBAC)SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomA-ELA-7-Winter-2016-2017" algorithmType="fixedform" algorithmImplementation="AIR FIXEDFORM1">
+        <SegmentBlueprint>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="3" idRef="4-CR"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="3" idRef="4-CR|2-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="3" idRef="4-CR|4-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="3" maxExamItems="3" idRef="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomA-ELA-7">
+            <ItemSelection>
+              <Property name="slope" value="85.8"/>
+              <Property name="intercept" value="2508.2"/>
+            </ItemSelection>
+          </SegmentBlueprintElement>
+        </SegmentBlueprint>
+        <SegmentForms>
+          <SegmentForm id="ELA ICA Perf G7a 2017 ENG" cohort="Default">
+            <Presentations>
+              <Presentation label="Braille" code="ENU-Braille"/>
+              <Presentation label="English" code="ENU"/>
+            </Presentations>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="1960">
+              <Stimulus id="1960"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="true" id="61310" type="SA">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="HandScored"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomA-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRTGPC" scorePoints="2" weight="1.0">
+                    <ItemScoreParameter value="0.8203399777412415" measurementParameter="a"/>
+                    <ItemScoreParameter value="1.008489966392517" measurementParameter="b0"/>
+                    <ItemScoreParameter value="2.2355499267578125" measurementParameter="b1"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="true" id="61312" type="SA">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="4"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="HandScored"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomA-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|2-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRTGPC" scorePoints="2" weight="1.0">
+                    <ItemScoreParameter value="0.8300399780273438" measurementParameter="a"/>
+                    <ItemScoreParameter value="2.0839099884033203" measurementParameter="b0"/>
+                    <ItemScoreParameter value="2.3973898887634277" measurementParameter="b1"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="false" id="61314" type="MI">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="3"/>
+                  <PoolProperty name="Difficulty Category" value="Overall=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="Automatic with Machine Rubric"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomA-ELA-7"/>
+                  <BlueprintReference idRef="4-CR"/>
+                  <BlueprintReference idRef="4-CR|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension measurementModel="IRT3PLn" scorePoints="1" weight="1.0">
+                    <ItemScoreParameter value="0.7428100109100342" measurementParameter="a"/>
+                    <ItemScoreParameter value="3.2562100887298584" measurementParameter="b"/>
+                    <ItemScoreParameter value="0.0" measurementParameter="c"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+          </SegmentForm>
+        </SegmentForms>
+      </Segment>
+      <Segment entryApproval="false" exitApproval="false" position="2" id="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomB-ELA-7" label="(SBAC)SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomB-ELA-7-Winter-2016-2017" algorithmType="fixedform" algorithmImplementation="AIR FIXEDFORM1">
+        <SegmentBlueprint>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="1" idRef="2-W"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="0" maxExamItems="1" idRef="2-W|4-7"/>
+          <SegmentBlueprintElement minFieldTestItems="0" maxFieldTestItems="0" minExamItems="1" maxExamItems="1" idRef="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomB-ELA-7">
+            <ItemSelection>
+              <Property name="slope" value="85.8"/>
+              <Property name="intercept" value="2508.2"/>
+            </ItemSelection>
+          </SegmentBlueprintElement>
+        </SegmentBlueprint>
+        <SegmentForms>
+          <SegmentForm id="ELA ICA Perf G7b 2017 ENG" cohort="Default">
+            <Presentations>
+              <Presentation label="Braille" code="ENU-Braille"/>
+              <Presentation label="English" code="ENU"/>
+            </Presentations>
+            <ItemGroup maxItems="ALL" maxResponses="ALL" id="1960">
+              <Stimulus id="1960"/>
+              <Item active="true" doNotScore="false" fieldTest="false" administrationRequired="false" responseRequired="false" handScored="true" id="61316" type="WER">
+                <PoolProperties>
+                  <PoolProperty name="Appropriate for Hearing Impaired" value="Yes"/>
+                  <PoolProperty name="ASL" value="N"/>
+                  <PoolProperty name="Braille" value="BRF"/>
+                  <PoolProperty name="Depth of Knowledge" value="4"/>
+                  <PoolProperty name="Difficulty Category" value="Conventions=Moderate|Evidence%2FPurpose=Difficult"/>
+                  <PoolProperty name="Grade" value="7"/>
+                  <PoolProperty name="Scoring Engine" value="HandScored"/>
+                  <PoolProperty name="Spanish Translation" value="N"/>
+                  <PoolProperty name="Test Pool" value="Interim"/>
+                </PoolProperties>
+                <Presentations>
+                  <Presentation label="Braille" code="ENU-Braille"/>
+                  <Presentation label="English" code="ENU"/>
+                </Presentations>
+                <BlueprintReferences>
+                  <BlueprintReference idRef="SBAC-ICA-FIXED-G7E-Perf-TechnologyInTheClassroomB-ELA-7"/>
+                  <BlueprintReference idRef="2-W"/>
+                  <BlueprintReference idRef="2-W|4-7"/>
+                </BlueprintReferences>
+                <ItemScoreDimensions>
+                  <ItemScoreDimension dimension="C" measurementModel="IRTGPC" scorePoints="2" weight="1.0">
+                    <ItemScoreParameter value="1.1600500345230103" measurementParameter="a"/>
+                    <ItemScoreParameter value="-0.5556600093841553" measurementParameter="b0"/>
+                    <ItemScoreParameter value="0.5138599872589111" measurementParameter="b1"/>
+                  </ItemScoreDimension>
+                  <ItemScoreDimension dimension="D" measurementModel="IRTGPC" scorePoints="4" weight="1.0">
+                    <ItemScoreParameter value="0.9447100162506104" measurementParameter="a"/>
+                    <ItemScoreParameter value="-1.2094299793243408" measurementParameter="b0"/>
+                    <ItemScoreParameter value="0.44815000891685486" measurementParameter="b1"/>
+                    <ItemScoreParameter value="1.756160020828247" measurementParameter="b2"/>
+                    <ItemScoreParameter value="3.329400062561035" measurementParameter="b3"/>
+                  </ItemScoreDimension>
+                </ItemScoreDimensions>
+              </Item>
+            </ItemGroup>
+          </SegmentForm>
+        </SegmentForms>
+        <Tools>
+          <Tool name="Calculator">
+            <Options>
+              <Option code="TDS_Calc0" sortOrder="0" />
+              <Option code="TDS_CalcSciInv" sortOrder="1" default="true" />
+            </Options>
+          </Tool>
+        </Tools>
+      </Segment>
+    </Segments>
+  </Test>
+</TestPackage>
