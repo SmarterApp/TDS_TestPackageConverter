@@ -4,7 +4,7 @@
 
 	<groupId>org.opentestsystem.delivery</groupId>
 	<artifactId>tds-test-package-converter</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>tds-test-package-converter</name>
