@@ -18,7 +18,7 @@ import java.util.Optional;
  *
  * The grade level also must be provided because some legacy IDs omit this information.
  */
-public class CsidEnhancer {
+public class ContentSpecIdEnhancer {
     private static final Logger log = LoggerFactory.getLogger(LegacyScoringTestPackageFormMapper.class);
 
     private ContentSpecIdConverter converter = new ContentSpecIdConverter();
@@ -27,7 +27,7 @@ public class CsidEnhancer {
     private String prefix;
     private final ContentSpecGrade grade;
 
-    public CsidEnhancer(String subject, String grade) {
+    public ContentSpecIdEnhancer(String subject, String grade) {
         if (subject.equalsIgnoreCase("MATH")) {
             this.subject = ContentSpecSubject.MATH;
             this.prefix = ContentSpecFormat.MATH_V6.getLegacyPrefix();

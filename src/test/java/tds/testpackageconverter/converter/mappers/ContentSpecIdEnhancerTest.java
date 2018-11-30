@@ -7,11 +7,11 @@ import java.util.Optional;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class CsidEnhancerTest {
+public class ContentSpecIdEnhancerTest {
 
     @Test
     public void shouldEnhanceMathId() {
-        CsidEnhancer enhancer = new CsidEnhancer("MATH", "8");
+        ContentSpecIdEnhancer enhancer = new ContentSpecIdEnhancer("MATH", "8");
 
         Optional<String> enhancedFormat = enhancer.enhance("1");
         assertTrue(enhancedFormat.isPresent());
@@ -22,7 +22,7 @@ public class CsidEnhancerTest {
 
     @Test
     public void shouldEnhanceElaId() {
-        CsidEnhancer enhancer = new CsidEnhancer("ELA", "4");
+        ContentSpecIdEnhancer enhancer = new ContentSpecIdEnhancer("ELA", "4");
 
         Optional<String> enhancedFormat = enhancer.enhance("2");
         assertTrue(enhancedFormat.isPresent());
@@ -34,7 +34,7 @@ public class CsidEnhancerTest {
 
     @Test
     public void shouldFailUnknownSubject() {
-        CsidEnhancer enhancer = new CsidEnhancer("Bogus", "4");
+        ContentSpecIdEnhancer enhancer = new ContentSpecIdEnhancer("Bogus", "4");
 
         Optional<String> enhancedFormat = enhancer.enhance("2");
         assertFalse(enhancedFormat.isPresent());
@@ -42,7 +42,7 @@ public class CsidEnhancerTest {
 
     @Test
     public void shouldFailBadInput() {
-        CsidEnhancer enhancer = new CsidEnhancer("MATH", "4");
+        ContentSpecIdEnhancer enhancer = new ContentSpecIdEnhancer("MATH", "4");
 
         Optional<String> enhancedFormat = enhancer.enhance("Bogus");
         assertFalse(enhancedFormat.isPresent());
