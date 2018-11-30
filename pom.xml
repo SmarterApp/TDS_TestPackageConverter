@@ -60,6 +60,13 @@
 			<artifactId>tds-common-legacy</artifactId>
 			<version>${tds-common.version}</version>
 		</dependency>
+
+		<!-- SBAC common library -->
+		<dependency>
+			<groupId>org.opentestsystem.shared</groupId>
+			<artifactId>content-spec-id</artifactId>
+			<version>0.0.3</version>
+		</dependency>
 	</dependencies>
 
     <scm>
