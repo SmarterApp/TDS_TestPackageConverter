@@ -3,9 +3,12 @@ package tds.testpackageconverter.converter.mappers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
-import tds.testpackage.model.*;
+import tds.testpackage.model.BlueprintElement;
+import tds.testpackage.model.BlueprintElementTypes;
+import tds.testpackage.model.Parameter;
+import tds.testpackage.model.PerformanceLevel;
+import tds.testpackage.model.Rule;
 import tds.testpackageconverter.converter.TestPackageBaseTest;
-import tds.testpackageconverter.converter.mappers.TestPackageBlueprintMapper;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -35,11 +38,15 @@ public class TestPackageBlueprintMapperTest extends TestPackageBaseTest {
         BlueprintElement targetBpElement = claimBpElement.blueprintElements().get(0);
         assertThat(targetBpElement.getType()).isEqualTo(BlueprintElementTypes.TARGET);
         assertThat(targetBpElement.getId()).isEqualTo("2|A-CED");
+        assertThat(targetBpElement.getLabel().isPresent());
+        assertThat(targetBpElement.getLabel().get()).isEqualTo("M.GHS.C2A-CED");
         // Nested target
         assertThat(targetBpElement.blueprintElements()).hasSize(1);
         BlueprintElement nestedTargetBpElement = targetBpElement.blueprintElements().get(0);
         assertThat(nestedTargetBpElement.getType()).isEqualTo(BlueprintElementTypes.TARGET);
         assertThat(nestedTargetBpElement.getId()).isEqualTo("2|A-CED|A");
+        assertThat(targetBpElement.getLabel().isPresent());
+        assertThat(targetBpElement.getLabel().get()).isEqualTo("M.GHS.C2A-CED");
         assertThat(nestedTargetBpElement.blueprintElements()).isEmpty();
     }
 
@@ -93,11 +100,15 @@ public class TestPackageBlueprintMapperTest extends TestPackageBaseTest {
         BlueprintElement targetBpElement = claimBpElement.blueprintElements().get(0);
         assertThat(targetBpElement.getType()).isEqualTo(BlueprintElementTypes.TARGET);
         assertThat(targetBpElement.getId()).isEqualTo("2|A-CED");
+        assertThat(targetBpElement.getLabel().isPresent());
+        assertThat(targetBpElement.getLabel().get()).isEqualTo("M.GHS.C2A-CED");
         // Nested target
         assertThat(targetBpElement.blueprintElements()).hasSize(1);
         BlueprintElement nestedTargetBpElement = targetBpElement.blueprintElements().get(0);
         assertThat(nestedTargetBpElement.getType()).isEqualTo(BlueprintElementTypes.TARGET);
         assertThat(nestedTargetBpElement.getId()).isEqualTo("2|A-CED|A");
+        assertThat(targetBpElement.getLabel().isPresent());
+        assertThat(targetBpElement.getLabel().get()).isEqualTo("M.GHS.C2A-CED");
         assertThat(nestedTargetBpElement.blueprintElements()).isEmpty();
 
     }

@@ -1,12 +1,27 @@
 package tds.testpackageconverter.converter.mappers;
 
-import tds.testpackage.legacy.model.*;
-import tds.testpackage.model.*;
+import tds.testpackage.legacy.model.Bpelement;
+import tds.testpackage.legacy.model.Computationrule;
+import tds.testpackage.legacy.model.Identifier;
+import tds.testpackage.legacy.model.Performancelevel;
+import tds.testpackage.legacy.model.Testspecification;
+import tds.testpackage.model.BlueprintElement;
+import tds.testpackage.model.BlueprintElementTypes;
+import tds.testpackage.model.Parameter;
+import tds.testpackage.model.PerformanceLevel;
 import tds.testpackage.model.Property;
+import tds.testpackage.model.Rule;
 import tds.testpackage.model.Scoring;
+import tds.testpackage.model.TestPackage;
+import tds.testpackage.model.Value;
 import tds.testpackageconverter.utils.TestPackageUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,6 +39,19 @@ public class TestPackageBlueprintMapper {
      */
     public static List<BlueprintElement> mapBlueprint(final String testPackageName,
                                                       final List<Testspecification> testSpecifications) {
+
+        if (testSpecifications.isEmpty()) {
+            throw new IllegalArgumentException("No test test packages found. Aborting...");
+        }
+
+        // Need to find subject and grade, both of which we assume to be consistent over the set of
+        // test specifications. Therefore, we just examine the first one.
+        Testspecification firstSpecification = testSpecifications.get(0);
+        String subject = findSingleProperty(firstSpecification.getProperty(), "subject").toUpperCase();
+        String grade = findSingleProperty(firstSpecification.getProperty(), "grade");
+
+        CsidEnhancer csidEnhancer = new CsidEnhancer(subject, grade);
+
         // Get a mapping of all blueprint element "unique ids" to "names".
         // In the legacy test specifications, the "uniqueid" was typically the publisher concatenated with the name.
         // For assessment/segment blueprint elements, the id was the "<assessment/segment> key" and the name
@@ -70,7 +98,7 @@ public class TestPackageBlueprintMapper {
         LinkedHashSet<BlueprintElement> blueprintElements = new LinkedHashSet<>(mapTestAndSegmentBlueprintElements(adminTestPackages,
                 scoringMap, packageId));
         blueprintElements.addAll(mapMiscellaneousBlueprintElements(testSpecifications, scoringMap));
-        blueprintElements.addAll(mapClaimsAndTargetBlueprintElements(adminTestPackages, scoringMap));
+        blueprintElements.addAll(mapClaimsAndTargetBlueprintElements(adminTestPackages, scoringMap, csidEnhancer));
         return new ArrayList<>(blueprintElements);
     }
 
@@ -203,6 +231,7 @@ public class TestPackageBlueprintMapper {
         }
     }
 
+
     // Map Affinity Groups, SOCK, and other miscellaneous blueprint elements
     private static List<BlueprintElement> mapMiscellaneousBlueprintElements(final List<Testspecification> testSpecifications,
                                                                             final Map<String, Scoring> scoringMap) {
@@ -243,7 +272,8 @@ public class TestPackageBlueprintMapper {
     }
 
     private static List<BlueprintElement> mapClaimsAndTargetBlueprintElements(final List<Testspecification> testSpecifications,
-                                                                              final Map<String, Scoring> scoringMap) {
+                                                                              final Map<String, Scoring> scoringMap,
+                                                                              CsidEnhancer csidEnhancer) {
         // Nest and map Claims/Targets (strands/content levels in legacy)
         Map<String, List<Bpelement>> parentIdToBpElement = testSpecifications.stream()
                 .flatMap(testSpecification -> {
@@ -269,6 +299,7 @@ public class TestPackageBlueprintMapper {
                                 .filter(bpEl -> bpEl.getElementtype().equalsIgnoreCase(BlueprintElementTypes.STRAND))
                                 .map(bpEl -> BlueprintElement.builder()
                                         .setId(bpEl.getIdentifier().getName())
+                                        .setLabel(csidEnhancer.enhance(bpEl.getIdentifier().getName()))
                                         .setType(BlueprintElementTypes.CLAIM)
                                         .setBlueprintElements(new ArrayList<>())
                                         .setScoring(Optional.ofNullable(scoringMap.get(bpEl.getIdentifier().getName())))
@@ -280,6 +311,7 @@ public class TestPackageBlueprintMapper {
                                 .filter(bpEl -> bpEl.getElementtype().equalsIgnoreCase(BlueprintElementTypes.STRAND))
                                 .map(bpEl -> BlueprintElement.builder()
                                         .setId(bpEl.getIdentifier().getName())
+                                        .setLabel(csidEnhancer.enhance(bpEl.getIdentifier().getName()))
                                         .setType(BlueprintElementTypes.CLAIM)
                                         .setScoring(Optional.ofNullable(scoringMap.get(bpEl.getIdentifier().getName())))
                                         .setBlueprintElements(new ArrayList<>())
@@ -289,14 +321,15 @@ public class TestPackageBlueprintMapper {
                 })
                 .collect(Collectors.toCollection(LinkedHashSet::new));
 
-        claimBlueprintElements.forEach(blueprintElement -> mapBlueprintElement(blueprintElement, parentIdToBpElement, scoringMap));
+        claimBlueprintElements.forEach(blueprintElement ->
+                mapBlueprintElement(blueprintElement, parentIdToBpElement, scoringMap, csidEnhancer));
 
         return new ArrayList<>(claimBlueprintElements);
     }
 
     // Recursively map all blueprint elements breadth-first
     private static void mapBlueprintElement(final BlueprintElement currentEl, final Map<String, List<Bpelement>> parentMap,
-                                            final Map<String, Scoring> scoringMap) {
+                                            final Map<String, Scoring> scoringMap, CsidEnhancer csidEnhancer) {
         if (parentMap.containsKey(currentEl.getId())) {
             List<BlueprintElement> blueprintElements = currentEl.blueprintElements();
             List<Bpelement> bpEl = parentMap.get(currentEl.getId());
@@ -304,13 +337,22 @@ public class TestPackageBlueprintMapper {
             bpEl.forEach(childEl -> {
                 BlueprintElement currBpEl = BlueprintElement.builder()
                         .setId(childEl.getIdentifier().getName())
+                        .setLabel(csidEnhancer.enhance(childEl.getIdentifier().getName()))
                         .setType(BlueprintElementTypes.TARGET)
                         .setBlueprintElements(new ArrayList<>())
                         .setScoring(Optional.ofNullable(scoringMap.get(childEl.getIdentifier().getUniqueid())))
                         .build();
                 blueprintElements.add(currBpEl);
-                mapBlueprintElement(currBpEl, parentMap, scoringMap);
+                mapBlueprintElement(currBpEl, parentMap, scoringMap, csidEnhancer);
             });
         }
+    }
+
+    private static String findSingleProperty(final List<tds.testpackage.legacy.model.Property> properties, final String propertyName) {
+        return properties.stream()
+                .filter(property -> property.getName().equalsIgnoreCase(propertyName))
+                .map(tds.testpackage.legacy.model.Property::getValue)
+                .findAny()
+                .orElseThrow(() -> new IllegalArgumentException("No subject property was found in the test specification package"));
     }
 }
