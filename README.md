@@ -86,6 +86,19 @@ java -jar test-package-converter.jar convert-to-new newTestPackage.xml -a handSc
 
 The command will create a new test package in the new format with the name `newTestPackage.xml`.  It will use test packages `handScoreTestPackage1.xml` and `handScoreTestPackage2.xml`.  It will use scoring file `scoringFile.xml` and diff file `diffFile.xml`.  Lastly, the `-v` will provide more verbose logging.
 
+#### Enhanced IDs
+During test package conversion, item IDs will be converted from legacy format
+to enhanced format. The original ID will appear in the id attribute
+of the converted element and the enhanced ID will appear in the label
+attribute.
+
+If any ID cannot be converted to enhanced format, a warning message
+will be output to the console during the conversion process. These
+messages will be prefixed with `Enhanced ID Issue` and will contain
+specific information about the conversion failure.
+
+See [ContentSpecificationIdFormats.pdf](http://www.smarterapp.org/documents/ContentSpecificationIdFormats.pdf) for
+details on the conversion.
 
 ## Converting from New to Legacy Format
 

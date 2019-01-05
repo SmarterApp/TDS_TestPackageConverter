@@ -4,7 +4,7 @@
 
 	<groupId>org.opentestsystem.delivery</groupId>
 	<artifactId>tds-test-package-converter</artifactId>
-	<version>1.0.0.RELEASE</version>
+	<version>1.1.1.RELEASE</version>
 	<packaging>jar</packaging>
 
 	<name>tds-test-package-converter</name>
@@ -59,6 +59,13 @@
 			<groupId>org.opentestsystem.delivery</groupId>
 			<artifactId>tds-common-legacy</artifactId>
 			<version>${tds-common.version}</version>
+		</dependency>
+
+		<!-- SBAC common library -->
+		<dependency>
+			<groupId>org.opentestsystem.shared</groupId>
+			<artifactId>content-spec-id</artifactId>
+			<version>0.0.5</version>
 		</dependency>
 	</dependencies>
 
